@@ -1,0 +1,82 @@
+{
+  "guidance_scale": 1.0,
+  "fixed_prompt": "instrumental background music",
+  "ours": {
+    "n_prompts": 1,
+    "mean_valence_spread_low_vs_high": 0.18094046413898468,
+    "mean_arousal_spread_low_vs_high": 0.19123928993940353,
+    "pearson_target_vs_pred_valence": 0.860577530863315,
+    "pearson_target_vs_pred_arousal": 0.6223216119310498
+  },
+  "baseline": {
+    "n_prompts": 1,
+    "mean_valence_spread_low_vs_high": 0.20130353420972824,
+    "mean_arousal_spread_low_vs_high": 0.2461571991443634,
+    "pearson_target_vs_pred_valence": -0.9317043972581971,
+    "pearson_target_vs_pred_arousal": -0.9992592443901229
+  },
+  "ours_rows": [
+    {
+      "prompt_idx": 0,
+      "prompt": "instrumental background music",
+      "va_tag": "low",
+      "target_valence": -0.9,
+      "target_arousal": -0.9,
+      "pred_valence": -0.08929532766342163,
+      "pred_arousal": -0.11678919941186905,
+      "wav": "eval_outputs/va_ctrl_ours/p00_low.wav"
+    },
+    {
+      "prompt_idx": 0,
+      "prompt": "instrumental background music",
+      "va_tag": "mid",
+      "target_valence": 0.0,
+      "target_arousal": 0.0,
+      "pred_valence": -0.09156499058008194,
+      "pred_arousal": -0.22948545217514038,
+      "wav": "eval_outputs/va_ctrl_ours/p00_mid.wav"
+    },
+    {
+      "prompt_idx": 0,
+      "prompt": "instrumental background music",
+      "va_tag": "high",
+      "target_valence": 0.9,
+      "target_arousal": 0.9,
+      "pred_valence": 0.09164513647556305,
+      "pred_arousal": 0.07445009052753448,
+      "wav": "eval_outputs/va_ctrl_ours/p00_high.wav"
+    }
+  ],
+  "baseline_rows": [
+    {
+      "prompt_idx": 0,
+      "prompt": "instrumental background music",
+      "va_tag": "low",
+      "target_valence": -0.9,
+      "target_arousal": -0.9,
+      "pred_valence": 0.0677076205611229,
+      "pred_arousal": 0.0970948338508606,
+      "wav": "eval_outputs/va_ctrl_baseline/p00_low.wav"
+    },
+    {
+      "prompt_idx": 0,
+      "prompt": "instrumental background music",
+      "va_tag": "mid",
+      "target_valence": 0.0,
+      "target_arousal": 0.0,
+      "pred_valence": 0.035018548369407654,
+      "pred_arousal": -0.034193649888038635,
+      "wav": "eval_outputs/va_ctrl_baseline/p00_mid.wav"
+    },
+    {
+      "prompt_idx": 0,
+      "prompt": "instrumental background music",
+      "va_tag": "high",
+      "target_valence": 0.9,
+      "target_arousal": 0.9,
+      "pred_valence": -0.13359591364860535,
+      "pred_arousal": -0.1490623652935028,
+      "wav": "eval_outputs/va_ctrl_baseline/p00_high.wav"
+    }
+  ]
+}

@@ -1,0 +1,514 @@
+nohup: ignoring input
+Training VA regressor on 2259 ground-truth-labeled clips
+/root/miniconda3/lib/python3.8/site-packages/torch/functional.py:513: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3609.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/root/miniconda3/lib/python3.8/site-packages/huggingface_hub/file_download.py:949: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of the model checkpoint at roberta-base were not used when initializing RobertaModel: ['lm_head.layer_norm.bias', 'lm_head.dense.weight', 'lm_head.dense.bias', 'lm_head.layer_norm.weight', 'lm_head.bias']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Load the specified checkpoint checkpoints/clap_weights/music_audioset_epoch_15_esc_90.14.pt from users.
+Load Checkpoint...
+/root/miniconda3/lib/python3.8/site-packages/laion_clap/clap_module/factory.py:52: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(checkpoint_path, map_location=map_location)
+logit_scale_a 	 Loaded
+logit_scale_t 	 Loaded
+audio_branch.spectrogram_extractor.stft.conv_real.weight 	 Loaded
+audio_branch.spectrogram_extractor.stft.conv_imag.weight 	 Loaded
+audio_branch.logmel_extractor.melW 	 Loaded
+audio_branch.bn0.weight 	 Loaded
+audio_branch.bn0.bias 	 Loaded
+audio_branch.patch_embed.proj.weight 	 Loaded
+audio_branch.patch_embed.proj.bias 	 Loaded
+audio_branch.patch_embed.norm.weight 	 Loaded
+audio_branch.patch_embed.norm.bias 	 Loaded
+audio_branch.layers.0.blocks.0.norm1.weight 	 Loaded
+audio_branch.layers.0.blocks.0.norm1.bias 	 Loaded
+audio_branch.layers.0.blocks.0.attn.relative_position_bias_table 	 Loaded
+audio_branch.layers.0.blocks.0.attn.qkv.weight 	 Loaded
+audio_branch.layers.0.blocks.0.attn.qkv.bias 	 Loaded
+audio_branch.layers.0.blocks.0.attn.proj.weight 	 Loaded
+audio_branch.layers.0.blocks.0.attn.proj.bias 	 Loaded
+audio_branch.layers.0.blocks.0.norm2.weight 	 Loaded
+audio_branch.layers.0.blocks.0.norm2.bias 	 Loaded
+audio_branch.layers.0.blocks.0.mlp.fc1.weight 	 Loaded
+audio_branch.layers.0.blocks.0.mlp.fc1.bias 	 Loaded
+audio_branch.layers.0.blocks.0.mlp.fc2.weight 	 Loaded
+audio_branch.layers.0.blocks.0.mlp.fc2.bias 	 Loaded
+audio_branch.layers.0.blocks.1.norm1.weight 	 Loaded
+audio_branch.layers.0.blocks.1.norm1.bias 	 Loaded
+audio_branch.layers.0.blocks.1.attn.relative_position_bias_table 	 Loaded
+audio_branch.layers.0.blocks.1.attn.qkv.weight 	 Loaded
+audio_branch.layers.0.blocks.1.attn.qkv.bias 	 Loaded
+audio_branch.layers.0.blocks.1.attn.proj.weight 	 Loaded
+audio_branch.layers.0.blocks.1.attn.proj.bias 	 Loaded
+audio_branch.layers.0.blocks.1.norm2.weight 	 Loaded
+audio_branch.layers.0.blocks.1.norm2.bias 	 Loaded
+audio_branch.layers.0.blocks.1.mlp.fc1.weight 	 Loaded
+audio_branch.layers.0.blocks.1.mlp.fc1.bias 	 Loaded
+audio_branch.layers.0.blocks.1.mlp.fc2.weight 	 Loaded
+audio_branch.layers.0.blocks.1.mlp.fc2.bias 	 Loaded
+audio_branch.layers.0.downsample.reduction.weight 	 Loaded
+audio_branch.layers.0.downsample.norm.weight 	 Loaded
+audio_branch.layers.0.downsample.norm.bias 	 Loaded
+audio_branch.layers.1.blocks.0.norm1.weight 	 Loaded
+audio_branch.layers.1.blocks.0.norm1.bias 	 Loaded
+audio_branch.layers.1.blocks.0.attn.relative_position_bias_table 	 Loaded
+audio_branch.layers.1.blocks.0.attn.qkv.weight 	 Loaded
+audio_branch.layers.1.blocks.0.attn.qkv.bias 	 Loaded
+audio_branch.layers.1.blocks.0.attn.proj.weight 	 Loaded
+audio_branch.layers.1.blocks.0.attn.proj.bias 	 Loaded
+audio_branch.layers.1.blocks.0.norm2.weight 	 Loaded
+audio_branch.layers.1.blocks.0.norm2.bias 	 Loaded
+audio_branch.layers.1.blocks.0.mlp.fc1.weight 	 Loaded
+audio_branch.layers.1.blocks.0.mlp.fc1.bias 	 Loaded
+audio_branch.layers.1.blocks.0.mlp.fc2.weight 	 Loaded
+audio_branch.layers.1.blocks.0.mlp.fc2.bias 	 Loaded
+audio_branch.layers.1.blocks.1.norm1.weight 	 Loaded
+audio_branch.layers.1.blocks.1.norm1.bias 	 Loaded
+audio_branch.layers.1.blocks.1.attn.relative_position_bias_table 	 Loaded
+audio_branch.layers.1.blocks.1.attn.qkv.weight 	 Loaded
+audio_branch.layers.1.blocks.1.attn.qkv.bias 	 Loaded
+audio_branch.layers.1.blocks.1.attn.proj.weight 	 Loaded
+audio_branch.layers.1.blocks.1.attn.proj.bias 	 Loaded
+audio_branch.layers.1.blocks.1.norm2.weight 	 Loaded
+audio_branch.layers.1.blocks.1.norm2.bias 	 Loaded
+audio_branch.layers.1.blocks.1.mlp.fc1.weight 	 Loaded
+audio_branch.layers.1.blocks.1.mlp.fc1.bias 	 Loaded
+audio_branch.layers.1.blocks.1.mlp.fc2.weight 	 Loaded
+audio_branch.layers.1.blocks.1.mlp.fc2.bias 	 Loaded
+audio_branch.layers.1.downsample.reduction.weight 	 Loaded
+audio_branch.layers.1.downsample.norm.weight 	 Loaded
+audio_branch.layers.1.downsample.norm.bias 	 Loaded
+audio_branch.layers.2.blocks.0.norm1.weight 	 Loaded
+audio_branch.layers.2.blocks.0.norm1.bias 	 Loaded
+audio_branch.layers.2.blocks.0.attn.relative_position_bias_table 	 Loaded
+audio_branch.layers.2.blocks.0.attn.qkv.weight 	 Loaded
+audio_branch.layers.2.blocks.0.attn.qkv.bias 	 Loaded
+audio_branch.layers.2.blocks.0.attn.proj.weight 	 Loaded
+audio_branch.layers.2.blocks.0.attn.proj.bias 	 Loaded
+audio_branch.layers.2.blocks.0.norm2.weight 	 Loaded
+audio_branch.layers.2.blocks.0.norm2.bias 	 Loaded
+audio_branch.layers.2.blocks.0.mlp.fc1.weight 	 Loaded
+audio_branch.layers.2.blocks.0.mlp.fc1.bias 	 Loaded
+audio_branch.layers.2.blocks.0.mlp.fc2.weight 	 Loaded
+audio_branch.layers.2.blocks.0.mlp.fc2.bias 	 Loaded
+audio_branch.layers.2.blocks.1.norm1.weight 	 Loaded
+audio_branch.layers.2.blocks.1.norm1.bias 	 Loaded
+audio_branch.layers.2.blocks.1.attn.relative_position_bias_table 	 Loaded
+audio_branch.layers.2.blocks.1.attn.qkv.weight 	 Loaded
+audio_branch.layers.2.blocks.1.attn.qkv.bias 	 Loaded
+audio_branch.layers.2.blocks.1.attn.proj.weight 	 Loaded
+audio_branch.layers.2.blocks.1.attn.proj.bias 	 Loaded
+audio_branch.layers.2.blocks.1.norm2.weight 	 Loaded
+audio_branch.layers.2.blocks.1.norm2.bias 	 Loaded
+audio_branch.layers.2.blocks.1.mlp.fc1.weight 	 Loaded
+audio_branch.layers.2.blocks.1.mlp.fc1.bias 	 Loaded
+audio_branch.layers.2.blocks.1.mlp.fc2.weight 	 Loaded
+audio_branch.layers.2.blocks.1.mlp.fc2.bias 	 Loaded
+audio_branch.layers.2.blocks.2.norm1.weight 	 Loaded
+audio_branch.layers.2.blocks.2.norm1.bias 	 Loaded
+audio_branch.layers.2.blocks.2.attn.relative_position_bias_table 	 Loaded
+audio_branch.layers.2.blocks.2.attn.qkv.weight 	 Loaded
+audio_branch.layers.2.blocks.2.attn.qkv.bias 	 Loaded
+audio_branch.layers.2.blocks.2.attn.proj.weight 	 Loaded
+audio_branch.layers.2.blocks.2.attn.proj.bias 	 Loaded
+audio_branch.layers.2.blocks.2.norm2.weight 	 Loaded
+audio_branch.layers.2.blocks.2.norm2.bias 	 Loaded
+audio_branch.layers.2.blocks.2.mlp.fc1.weight 	 Loaded
+audio_branch.layers.2.blocks.2.mlp.fc1.bias 	 Loaded
+audio_branch.layers.2.blocks.2.mlp.fc2.weight 	 Loaded
+audio_branch.layers.2.blocks.2.mlp.fc2.bias 	 Loaded
+audio_branch.layers.2.blocks.3.norm1.weight 	 Loaded
+audio_branch.layers.2.blocks.3.norm1.bias 	 Loaded
+audio_branch.layers.2.blocks.3.attn.relative_position_bias_table 	 Loaded
+audio_branch.layers.2.blocks.3.attn.qkv.weight 	 Loaded
+audio_branch.layers.2.blocks.3.attn.qkv.bias 	 Loaded
+audio_branch.layers.2.blocks.3.attn.proj.weight 	 Loaded
+audio_branch.layers.2.blocks.3.attn.proj.bias 	 Loaded
+audio_branch.layers.2.blocks.3.norm2.weight 	 Loaded
+audio_branch.layers.2.blocks.3.norm2.bias 	 Loaded
+audio_branch.layers.2.blocks.3.mlp.fc1.weight 	 Loaded
+audio_branch.layers.2.blocks.3.mlp.fc1.bias 	 Loaded
+audio_branch.layers.2.blocks.3.mlp.fc2.weight 	 Loaded
+audio_branch.layers.2.blocks.3.mlp.fc2.bias 	 Loaded
+audio_branch.layers.2.blocks.4.norm1.weight 	 Loaded
+audio_branch.layers.2.blocks.4.norm1.bias 	 Loaded
+audio_branch.layers.2.blocks.4.attn.relative_position_bias_table 	 Loaded
+audio_branch.layers.2.blocks.4.attn.qkv.weight 	 Loaded
+audio_branch.layers.2.blocks.4.attn.qkv.bias 	 Loaded
+audio_branch.layers.2.blocks.4.attn.proj.weight 	 Loaded
+audio_branch.layers.2.blocks.4.attn.proj.bias 	 Loaded
+audio_branch.layers.2.blocks.4.norm2.weight 	 Loaded
+audio_branch.layers.2.blocks.4.norm2.bias 	 Loaded
+audio_branch.layers.2.blocks.4.mlp.fc1.weight 	 Loaded
+audio_branch.layers.2.blocks.4.mlp.fc1.bias 	 Loaded
+audio_branch.layers.2.blocks.4.mlp.fc2.weight 	 Loaded
+audio_branch.layers.2.blocks.4.mlp.fc2.bias 	 Loaded
+audio_branch.layers.2.blocks.5.norm1.weight 	 Loaded
+audio_branch.layers.2.blocks.5.norm1.bias 	 Loaded
+audio_branch.layers.2.blocks.5.attn.relative_position_bias_table 	 Loaded
+audio_branch.layers.2.blocks.5.attn.qkv.weight 	 Loaded
+audio_branch.layers.2.blocks.5.attn.qkv.bias 	 Loaded
+audio_branch.layers.2.blocks.5.attn.proj.weight 	 Loaded
+audio_branch.layers.2.blocks.5.attn.proj.bias 	 Loaded
+audio_branch.layers.2.blocks.5.norm2.weight 	 Loaded
+audio_branch.layers.2.blocks.5.norm2.bias 	 Loaded
+audio_branch.layers.2.blocks.5.mlp.fc1.weight 	 Loaded
+audio_branch.layers.2.blocks.5.mlp.fc1.bias 	 Loaded
+audio_branch.layers.2.blocks.5.mlp.fc2.weight 	 Loaded
+audio_branch.layers.2.blocks.5.mlp.fc2.bias 	 Loaded
+audio_branch.layers.2.blocks.6.norm1.weight 	 Loaded
+audio_branch.layers.2.blocks.6.norm1.bias 	 Loaded
+audio_branch.layers.2.blocks.6.attn.relative_position_bias_table 	 Loaded
+audio_branch.layers.2.blocks.6.attn.qkv.weight 	 Loaded
+audio_branch.layers.2.blocks.6.attn.qkv.bias 	 Loaded
+audio_branch.layers.2.blocks.6.attn.proj.weight 	 Loaded
+audio_branch.layers.2.blocks.6.attn.proj.bias 	 Loaded
+audio_branch.layers.2.blocks.6.norm2.weight 	 Loaded
+audio_branch.layers.2.blocks.6.norm2.bias 	 Loaded
+audio_branch.layers.2.blocks.6.mlp.fc1.weight 	 Loaded
+audio_branch.layers.2.blocks.6.mlp.fc1.bias 	 Loaded
+audio_branch.layers.2.blocks.6.mlp.fc2.weight 	 Loaded
+audio_branch.layers.2.blocks.6.mlp.fc2.bias 	 Loaded
+audio_branch.layers.2.blocks.7.norm1.weight 	 Loaded
+audio_branch.layers.2.blocks.7.norm1.bias 	 Loaded
+audio_branch.layers.2.blocks.7.attn.relative_position_bias_table 	 Loaded
+audio_branch.layers.2.blocks.7.attn.qkv.weight 	 Loaded
+audio_branch.layers.2.blocks.7.attn.qkv.bias 	 Loaded
+audio_branch.layers.2.blocks.7.attn.proj.weight 	 Loaded
+audio_branch.layers.2.blocks.7.attn.proj.bias 	 Loaded
+audio_branch.layers.2.blocks.7.norm2.weight 	 Loaded
+audio_branch.layers.2.blocks.7.norm2.bias 	 Loaded
+audio_branch.layers.2.blocks.7.mlp.fc1.weight 	 Loaded
+audio_branch.layers.2.blocks.7.mlp.fc1.bias 	 Loaded
+audio_branch.layers.2.blocks.7.mlp.fc2.weight 	 Loaded
+audio_branch.layers.2.blocks.7.mlp.fc2.bias 	 Loaded
+audio_branch.layers.2.blocks.8.norm1.weight 	 Loaded
+audio_branch.layers.2.blocks.8.norm1.bias 	 Loaded
+audio_branch.layers.2.blocks.8.attn.relative_position_bias_table 	 Loaded
+audio_branch.layers.2.blocks.8.attn.qkv.weight 	 Loaded
+audio_branch.layers.2.blocks.8.attn.qkv.bias 	 Loaded
+audio_branch.layers.2.blocks.8.attn.proj.weight 	 Loaded
+audio_branch.layers.2.blocks.8.attn.proj.bias 	 Loaded
+audio_branch.layers.2.blocks.8.norm2.weight 	 Loaded
+audio_branch.layers.2.blocks.8.norm2.bias 	 Loaded
+audio_branch.layers.2.blocks.8.mlp.fc1.weight 	 Loaded
+audio_branch.layers.2.blocks.8.mlp.fc1.bias 	 Loaded
+audio_branch.layers.2.blocks.8.mlp.fc2.weight 	 Loaded
+audio_branch.layers.2.blocks.8.mlp.fc2.bias 	 Loaded
+audio_branch.layers.2.blocks.9.norm1.weight 	 Loaded
+audio_branch.layers.2.blocks.9.norm1.bias 	 Loaded
+audio_branch.layers.2.blocks.9.attn.relative_position_bias_table 	 Loaded
+audio_branch.layers.2.blocks.9.attn.qkv.weight 	 Loaded
+audio_branch.layers.2.blocks.9.attn.qkv.bias 	 Loaded
+audio_branch.layers.2.blocks.9.attn.proj.weight 	 Loaded
+audio_branch.layers.2.blocks.9.attn.proj.bias 	 Loaded
+audio_branch.layers.2.blocks.9.norm2.weight 	 Loaded
+audio_branch.layers.2.blocks.9.norm2.bias 	 Loaded
+audio_branch.layers.2.blocks.9.mlp.fc1.weight 	 Loaded
+audio_branch.layers.2.blocks.9.mlp.fc1.bias 	 Loaded
+audio_branch.layers.2.blocks.9.mlp.fc2.weight 	 Loaded
+audio_branch.layers.2.blocks.9.mlp.fc2.bias 	 Loaded
+audio_branch.layers.2.blocks.10.norm1.weight 	 Loaded
+audio_branch.layers.2.blocks.10.norm1.bias 	 Loaded
+audio_branch.layers.2.blocks.10.attn.relative_position_bias_table 	 Loaded
+audio_branch.layers.2.blocks.10.attn.qkv.weight 	 Loaded
+audio_branch.layers.2.blocks.10.attn.qkv.bias 	 Loaded
+audio_branch.layers.2.blocks.10.attn.proj.weight 	 Loaded
+audio_branch.layers.2.blocks.10.attn.proj.bias 	 Loaded
+audio_branch.layers.2.blocks.10.norm2.weight 	 Loaded
+audio_branch.layers.2.blocks.10.norm2.bias 	 Loaded
+audio_branch.layers.2.blocks.10.mlp.fc1.weight 	 Loaded
+audio_branch.layers.2.blocks.10.mlp.fc1.bias 	 Loaded
+audio_branch.layers.2.blocks.10.mlp.fc2.weight 	 Loaded
+audio_branch.layers.2.blocks.10.mlp.fc2.bias 	 Loaded
+audio_branch.layers.2.blocks.11.norm1.weight 	 Loaded
+audio_branch.layers.2.blocks.11.norm1.bias 	 Loaded
+audio_branch.layers.2.blocks.11.attn.relative_position_bias_table 	 Loaded
+audio_branch.layers.2.blocks.11.attn.qkv.weight 	 Loaded
+audio_branch.layers.2.blocks.11.attn.qkv.bias 	 Loaded
+audio_branch.layers.2.blocks.11.attn.proj.weight 	 Loaded
+audio_branch.layers.2.blocks.11.attn.proj.bias 	 Loaded
+audio_branch.layers.2.blocks.11.norm2.weight 	 Loaded
+audio_branch.layers.2.blocks.11.norm2.bias 	 Loaded
+audio_branch.layers.2.blocks.11.mlp.fc1.weight 	 Loaded
+audio_branch.layers.2.blocks.11.mlp.fc1.bias 	 Loaded
+audio_branch.layers.2.blocks.11.mlp.fc2.weight 	 Loaded
+audio_branch.layers.2.blocks.11.mlp.fc2.bias 	 Loaded
+audio_branch.layers.2.downsample.reduction.weight 	 Loaded
+audio_branch.layers.2.downsample.norm.weight 	 Loaded
+audio_branch.layers.2.downsample.norm.bias 	 Loaded
+audio_branch.layers.3.blocks.0.norm1.weight 	 Loaded
+audio_branch.layers.3.blocks.0.norm1.bias 	 Loaded
+audio_branch.layers.3.blocks.0.attn.relative_position_bias_table 	 Loaded
+audio_branch.layers.3.blocks.0.attn.qkv.weight 	 Loaded
+audio_branch.layers.3.blocks.0.attn.qkv.bias 	 Loaded
+audio_branch.layers.3.blocks.0.attn.proj.weight 	 Loaded
+audio_branch.layers.3.blocks.0.attn.proj.bias 	 Loaded
+audio_branch.layers.3.blocks.0.norm2.weight 	 Loaded
+audio_branch.layers.3.blocks.0.norm2.bias 	 Loaded
+audio_branch.layers.3.blocks.0.mlp.fc1.weight 	 Loaded
+audio_branch.layers.3.blocks.0.mlp.fc1.bias 	 Loaded
+audio_branch.layers.3.blocks.0.mlp.fc2.weight 	 Loaded
+audio_branch.layers.3.blocks.0.mlp.fc2.bias 	 Loaded
+audio_branch.layers.3.blocks.1.norm1.weight 	 Loaded
+audio_branch.layers.3.blocks.1.norm1.bias 	 Loaded
+audio_branch.layers.3.blocks.1.attn.relative_position_bias_table 	 Loaded
+audio_branch.layers.3.blocks.1.attn.qkv.weight 	 Loaded
+audio_branch.layers.3.blocks.1.attn.qkv.bias 	 Loaded
+audio_branch.layers.3.blocks.1.attn.proj.weight 	 Loaded
+audio_branch.layers.3.blocks.1.attn.proj.bias 	 Loaded
+audio_branch.layers.3.blocks.1.norm2.weight 	 Loaded
+audio_branch.layers.3.blocks.1.norm2.bias 	 Loaded
+audio_branch.layers.3.blocks.1.mlp.fc1.weight 	 Loaded
+audio_branch.layers.3.blocks.1.mlp.fc1.bias 	 Loaded
+audio_branch.layers.3.blocks.1.mlp.fc2.weight 	 Loaded
+audio_branch.layers.3.blocks.1.mlp.fc2.bias 	 Loaded
+audio_branch.norm.weight 	 Loaded
+audio_branch.norm.bias 	 Loaded
+audio_branch.tscam_conv.weight 	 Loaded
+audio_branch.tscam_conv.bias 	 Loaded
+audio_branch.head.weight 	 Loaded
+audio_branch.head.bias 	 Loaded
+text_branch.embeddings.word_embeddings.weight 	 Loaded
+text_branch.embeddings.position_embeddings.weight 	 Loaded
+text_branch.embeddings.token_type_embeddings.weight 	 Loaded
+text_branch.embeddings.LayerNorm.weight 	 Loaded
+text_branch.embeddings.LayerNorm.bias 	 Loaded
+text_branch.encoder.layer.0.attention.self.query.weight 	 Loaded
+text_branch.encoder.layer.0.attention.self.query.bias 	 Loaded
+text_branch.encoder.layer.0.attention.self.key.weight 	 Loaded
+text_branch.encoder.layer.0.attention.self.key.bias 	 Loaded
+text_branch.encoder.layer.0.attention.self.value.weight 	 Loaded
+text_branch.encoder.layer.0.attention.self.value.bias 	 Loaded
+text_branch.encoder.layer.0.attention.output.dense.weight 	 Loaded
+text_branch.encoder.layer.0.attention.output.dense.bias 	 Loaded
+text_branch.encoder.layer.0.attention.output.LayerNorm.weight 	 Loaded
+text_branch.encoder.layer.0.attention.output.LayerNorm.bias 	 Loaded
+text_branch.encoder.layer.0.intermediate.dense.weight 	 Loaded
+text_branch.encoder.layer.0.intermediate.dense.bias 	 Loaded
+text_branch.encoder.layer.0.output.dense.weight 	 Loaded
+text_branch.encoder.layer.0.output.dense.bias 	 Loaded
+text_branch.encoder.layer.0.output.LayerNorm.weight 	 Loaded
+text_branch.encoder.layer.0.output.LayerNorm.bias 	 Loaded
+text_branch.encoder.layer.1.attention.self.query.weight 	 Loaded
+text_branch.encoder.layer.1.attention.self.query.bias 	 Loaded
+text_branch.encoder.layer.1.attention.self.key.weight 	 Loaded
+text_branch.encoder.layer.1.attention.self.key.bias 	 Loaded
+text_branch.encoder.layer.1.attention.self.value.weight 	 Loaded
+text_branch.encoder.layer.1.attention.self.value.bias 	 Loaded
+text_branch.encoder.layer.1.attention.output.dense.weight 	 Loaded
+text_branch.encoder.layer.1.attention.output.dense.bias 	 Loaded
+text_branch.encoder.layer.1.attention.output.LayerNorm.weight 	 Loaded
+text_branch.encoder.layer.1.attention.output.LayerNorm.bias 	 Loaded
+text_branch.encoder.layer.1.intermediate.dense.weight 	 Loaded
+text_branch.encoder.layer.1.intermediate.dense.bias 	 Loaded
+text_branch.encoder.layer.1.output.dense.weight 	 Loaded
+text_branch.encoder.layer.1.output.dense.bias 	 Loaded
+text_branch.encoder.layer.1.output.LayerNorm.weight 	 Loaded
+text_branch.encoder.layer.1.output.LayerNorm.bias 	 Loaded
+text_branch.encoder.layer.2.attention.self.query.weight 	 Loaded
+text_branch.encoder.layer.2.attention.self.query.bias 	 Loaded
+text_branch.encoder.layer.2.attention.self.key.weight 	 Loaded
+text_branch.encoder.layer.2.attention.self.key.bias 	 Loaded
+text_branch.encoder.layer.2.attention.self.value.weight 	 Loaded
+text_branch.encoder.layer.2.attention.self.value.bias 	 Loaded
+text_branch.encoder.layer.2.attention.output.dense.weight 	 Loaded
+text_branch.encoder.layer.2.attention.output.dense.bias 	 Loaded
+text_branch.encoder.layer.2.attention.output.LayerNorm.weight 	 Loaded
+text_branch.encoder.layer.2.attention.output.LayerNorm.bias 	 Loaded
+text_branch.encoder.layer.2.intermediate.dense.weight 	 Loaded
+text_branch.encoder.layer.2.intermediate.dense.bias 	 Loaded
+text_branch.encoder.layer.2.output.dense.weight 	 Loaded
+text_branch.encoder.layer.2.output.dense.bias 	 Loaded
+text_branch.encoder.layer.2.output.LayerNorm.weight 	 Loaded
+text_branch.encoder.layer.2.output.LayerNorm.bias 	 Loaded
+text_branch.encoder.layer.3.attention.self.query.weight 	 Loaded
+text_branch.encoder.layer.3.attention.self.query.bias 	 Loaded
+text_branch.encoder.layer.3.attention.self.key.weight 	 Loaded
+text_branch.encoder.layer.3.attention.self.key.bias 	 Loaded
+text_branch.encoder.layer.3.attention.self.value.weight 	 Loaded
+text_branch.encoder.layer.3.attention.self.value.bias 	 Loaded
+text_branch.encoder.layer.3.attention.output.dense.weight 	 Loaded
+text_branch.encoder.layer.3.attention.output.dense.bias 	 Loaded
+text_branch.encoder.layer.3.attention.output.LayerNorm.weight 	 Loaded
+text_branch.encoder.layer.3.attention.output.LayerNorm.bias 	 Loaded
+text_branch.encoder.layer.3.intermediate.dense.weight 	 Loaded
+text_branch.encoder.layer.3.intermediate.dense.bias 	 Loaded
+text_branch.encoder.layer.3.output.dense.weight 	 Loaded
+text_branch.encoder.layer.3.output.dense.bias 	 Loaded
+text_branch.encoder.layer.3.output.LayerNorm.weight 	 Loaded
+text_branch.encoder.layer.3.output.LayerNorm.bias 	 Loaded
+text_branch.encoder.layer.4.attention.self.query.weight 	 Loaded
+text_branch.encoder.layer.4.attention.self.query.bias 	 Loaded
+text_branch.encoder.layer.4.attention.self.key.weight 	 Loaded
+text_branch.encoder.layer.4.attention.self.key.bias 	 Loaded
+text_branch.encoder.layer.4.attention.self.value.weight 	 Loaded
+text_branch.encoder.layer.4.attention.self.value.bias 	 Loaded
+text_branch.encoder.layer.4.attention.output.dense.weight 	 Loaded
+text_branch.encoder.layer.4.attention.output.dense.bias 	 Loaded
+text_branch.encoder.layer.4.attention.output.LayerNorm.weight 	 Loaded
+text_branch.encoder.layer.4.attention.output.LayerNorm.bias 	 Loaded
+text_branch.encoder.layer.4.intermediate.dense.weight 	 Loaded
+text_branch.encoder.layer.4.intermediate.dense.bias 	 Loaded
+text_branch.encoder.layer.4.output.dense.weight 	 Loaded
+text_branch.encoder.layer.4.output.dense.bias 	 Loaded
+text_branch.encoder.layer.4.output.LayerNorm.weight 	 Loaded
+text_branch.encoder.layer.4.output.LayerNorm.bias 	 Loaded
+text_branch.encoder.layer.5.attention.self.query.weight 	 Loaded
+text_branch.encoder.layer.5.attention.self.query.bias 	 Loaded
+text_branch.encoder.layer.5.attention.self.key.weight 	 Loaded
+text_branch.encoder.layer.5.attention.self.key.bias 	 Loaded
+text_branch.encoder.layer.5.attention.self.value.weight 	 Loaded
+text_branch.encoder.layer.5.attention.self.value.bias 	 Loaded
+text_branch.encoder.layer.5.attention.output.dense.weight 	 Loaded
+text_branch.encoder.layer.5.attention.output.dense.bias 	 Loaded
+text_branch.encoder.layer.5.attention.output.LayerNorm.weight 	 Loaded
+text_branch.encoder.layer.5.attention.output.LayerNorm.bias 	 Loaded
+text_branch.encoder.layer.5.intermediate.dense.weight 	 Loaded
+text_branch.encoder.layer.5.intermediate.dense.bias 	 Loaded
+text_branch.encoder.layer.5.output.dense.weight 	 Loaded
+text_branch.encoder.layer.5.output.dense.bias 	 Loaded
+text_branch.encoder.layer.5.output.LayerNorm.weight 	 Loaded
+text_branch.encoder.layer.5.output.LayerNorm.bias 	 Loaded
+text_branch.encoder.layer.6.attention.self.query.weight 	 Loaded
+text_branch.encoder.layer.6.attention.self.query.bias 	 Loaded
+text_branch.encoder.layer.6.attention.self.key.weight 	 Loaded
+text_branch.encoder.layer.6.attention.self.key.bias 	 Loaded
+text_branch.encoder.layer.6.attention.self.value.weight 	 Loaded
+text_branch.encoder.layer.6.attention.self.value.bias 	 Loaded
+text_branch.encoder.layer.6.attention.output.dense.weight 	 Loaded
+text_branch.encoder.layer.6.attention.output.dense.bias 	 Loaded
+text_branch.encoder.layer.6.attention.output.LayerNorm.weight 	 Loaded
+text_branch.encoder.layer.6.attention.output.LayerNorm.bias 	 Loaded
+text_branch.encoder.layer.6.intermediate.dense.weight 	 Loaded
+text_branch.encoder.layer.6.intermediate.dense.bias 	 Loaded
+text_branch.encoder.layer.6.output.dense.weight 	 Loaded
+text_branch.encoder.layer.6.output.dense.bias 	 Loaded
+text_branch.encoder.layer.6.output.LayerNorm.weight 	 Loaded
+text_branch.encoder.layer.6.output.LayerNorm.bias 	 Loaded
+text_branch.encoder.layer.7.attention.self.query.weight 	 Loaded
+text_branch.encoder.layer.7.attention.self.query.bias 	 Loaded
+text_branch.encoder.layer.7.attention.self.key.weight 	 Loaded
+text_branch.encoder.layer.7.attention.self.key.bias 	 Loaded
+text_branch.encoder.layer.7.attention.self.value.weight 	 Loaded
+text_branch.encoder.layer.7.attention.self.value.bias 	 Loaded
+text_branch.encoder.layer.7.attention.output.dense.weight 	 Loaded
+text_branch.encoder.layer.7.attention.output.dense.bias 	 Loaded
+text_branch.encoder.layer.7.attention.output.LayerNorm.weight 	 Loaded
+text_branch.encoder.layer.7.attention.output.LayerNorm.bias 	 Loaded
+text_branch.encoder.layer.7.intermediate.dense.weight 	 Loaded
+text_branch.encoder.layer.7.intermediate.dense.bias 	 Loaded
+text_branch.encoder.layer.7.output.dense.weight 	 Loaded
+text_branch.encoder.layer.7.output.dense.bias 	 Loaded
+text_branch.encoder.layer.7.output.LayerNorm.weight 	 Loaded
+text_branch.encoder.layer.7.output.LayerNorm.bias 	 Loaded
+text_branch.encoder.layer.8.attention.self.query.weight 	 Loaded
+text_branch.encoder.layer.8.attention.self.query.bias 	 Loaded
+text_branch.encoder.layer.8.attention.self.key.weight 	 Loaded
+text_branch.encoder.layer.8.attention.self.key.bias 	 Loaded
+text_branch.encoder.layer.8.attention.self.value.weight 	 Loaded
+text_branch.encoder.layer.8.attention.self.value.bias 	 Loaded
+text_branch.encoder.layer.8.attention.output.dense.weight 	 Loaded
+text_branch.encoder.layer.8.attention.output.dense.bias 	 Loaded
+text_branch.encoder.layer.8.attention.output.LayerNorm.weight 	 Loaded
+text_branch.encoder.layer.8.attention.output.LayerNorm.bias 	 Loaded
+text_branch.encoder.layer.8.intermediate.dense.weight 	 Loaded
+text_branch.encoder.layer.8.intermediate.dense.bias 	 Loaded
+text_branch.encoder.layer.8.output.dense.weight 	 Loaded
+text_branch.encoder.layer.8.output.dense.bias 	 Loaded
+text_branch.encoder.layer.8.output.LayerNorm.weight 	 Loaded
+text_branch.encoder.layer.8.output.LayerNorm.bias 	 Loaded
+text_branch.encoder.layer.9.attention.self.query.weight 	 Loaded
+text_branch.encoder.layer.9.attention.self.query.bias 	 Loaded
+text_branch.encoder.layer.9.attention.self.key.weight 	 Loaded
+text_branch.encoder.layer.9.attention.self.key.bias 	 Loaded
+text_branch.encoder.layer.9.attention.self.value.weight 	 Loaded
+text_branch.encoder.layer.9.attention.self.value.bias 	 Loaded
+text_branch.encoder.layer.9.attention.output.dense.weight 	 Loaded
+text_branch.encoder.layer.9.attention.output.dense.bias 	 Loaded
+text_branch.encoder.layer.9.attention.output.LayerNorm.weight 	 Loaded
+text_branch.encoder.layer.9.attention.output.LayerNorm.bias 	 Loaded
+text_branch.encoder.layer.9.intermediate.dense.weight 	 Loaded
+text_branch.encoder.layer.9.intermediate.dense.bias 	 Loaded
+text_branch.encoder.layer.9.output.dense.weight 	 Loaded
+text_branch.encoder.layer.9.output.dense.bias 	 Loaded
+text_branch.encoder.layer.9.output.LayerNorm.weight 	 Loaded
+text_branch.encoder.layer.9.output.LayerNorm.bias 	 Loaded
+text_branch.encoder.layer.10.attention.self.query.weight 	 Loaded
+text_branch.encoder.layer.10.attention.self.query.bias 	 Loaded
+text_branch.encoder.layer.10.attention.self.key.weight 	 Loaded
+text_branch.encoder.layer.10.attention.self.key.bias 	 Loaded
+text_branch.encoder.layer.10.attention.self.value.weight 	 Loaded
+text_branch.encoder.layer.10.attention.self.value.bias 	 Loaded
+text_branch.encoder.layer.10.attention.output.dense.weight 	 Loaded
+text_branch.encoder.layer.10.attention.output.dense.bias 	 Loaded
+text_branch.encoder.layer.10.attention.output.LayerNorm.weight 	 Loaded
+text_branch.encoder.layer.10.attention.output.LayerNorm.bias 	 Loaded
+text_branch.encoder.layer.10.intermediate.dense.weight 	 Loaded
+text_branch.encoder.layer.10.intermediate.dense.bias 	 Loaded
+text_branch.encoder.layer.10.output.dense.weight 	 Loaded
+text_branch.encoder.layer.10.output.dense.bias 	 Loaded
+text_branch.encoder.layer.10.output.LayerNorm.weight 	 Loaded
+text_branch.encoder.layer.10.output.LayerNorm.bias 	 Loaded
+text_branch.encoder.layer.11.attention.self.query.weight 	 Loaded
+text_branch.encoder.layer.11.attention.self.query.bias 	 Loaded
+text_branch.encoder.layer.11.attention.self.key.weight 	 Loaded
+text_branch.encoder.layer.11.attention.self.key.bias 	 Loaded
+text_branch.encoder.layer.11.attention.self.value.weight 	 Loaded
+text_branch.encoder.layer.11.attention.self.value.bias 	 Loaded
+text_branch.encoder.layer.11.attention.output.dense.weight 	 Loaded
+text_branch.encoder.layer.11.attention.output.dense.bias 	 Loaded
+text_branch.encoder.layer.11.attention.output.LayerNorm.weight 	 Loaded
+text_branch.encoder.layer.11.attention.output.LayerNorm.bias 	 Loaded
+text_branch.encoder.layer.11.intermediate.dense.weight 	 Loaded
+text_branch.encoder.layer.11.intermediate.dense.bias 	 Loaded
+text_branch.encoder.layer.11.output.dense.weight 	 Loaded
+text_branch.encoder.layer.11.output.dense.bias 	 Loaded
+text_branch.encoder.layer.11.output.LayerNorm.weight 	 Loaded
+text_branch.encoder.layer.11.output.LayerNorm.bias 	 Loaded
+text_branch.pooler.dense.weight 	 Loaded
+text_branch.pooler.dense.bias 	 Loaded
+text_transform.sequential.0.weight 	 Loaded
+text_transform.sequential.0.bias 	 Loaded
+text_transform.sequential.3.weight 	 Loaded
+text_transform.sequential.3.bias 	 Loaded
+text_projection.0.weight 	 Loaded
+text_projection.0.bias 	 Loaded
+text_projection.2.weight 	 Loaded
+text_projection.2.bias 	 Loaded
+audio_transform.sequential.0.weight 	 Loaded
+audio_transform.sequential.0.bias 	 Loaded
+audio_transform.sequential.3.weight 	 Loaded
+audio_transform.sequential.3.bias 	 Loaded
+audio_projection.0.weight 	 Loaded
+audio_projection.0.bias 	 Loaded
+audio_projection.2.weight 	 Loaded
+audio_projection.2.bias 	 Loaded
+Embedding audio with CLAP:   0%|          | 0/142 [00:00<?, ?it/s]/root/miniconda3/lib/python3.8/site-packages/torchaudio/transforms/_transforms.py:580: UserWarning: Argument 'onesided' has been deprecated and has no influence on the behavior of this module.
+  warnings.warn(
+Embedding audio with CLAP:   1%|          | 1/142 [00:03<07:40,  3.26s/it]Embedding audio with CLAP:   1%|▏         | 2/142 [00:04<05:13,  2.24s/it]Embedding audio with CLAP:   2%|▏         | 3/142 [00:06<04:25,  1.91s/it]Embedding audio with CLAP:   3%|▎         | 4/142 [00:07<04:02,  1.76s/it]Embedding audio with CLAP:   4%|▎         | 5/142 [00:09<03:52,  1.69s/it]Embedding audio with CLAP:   4%|▍         | 6/142 [00:10<03:41,  1.63s/it]Embedding audio with CLAP:   5%|▍         | 7/142 [00:12<03:45,  1.67s/it]Embedding audio with CLAP:   6%|▌         | 8/142 [00:14<03:39,  1.64s/it]Embedding audio with CLAP:   6%|▋         | 9/142 [00:15<03:29,  1.57s/it]Embedding audio with CLAP:   7%|▋         | 10/142 [00:17<03:25,  1.56s/it]Embedding audio with CLAP:   8%|▊         | 11/142 [00:18<03:19,  1.52s/it]Embedding audio with CLAP:   8%|▊         | 12/142 [00:20<03:21,  1.55s/it]Embedding audio with CLAP:   9%|▉         | 13/142 [00:21<03:20,  1.55s/it]Embedding audio with CLAP:  10%|▉         | 14/142 [00:23<03:15,  1.53s/it]Embedding audio with CLAP:  11%|█         | 15/142 [00:24<03:20,  1.58s/it]Embedding audio with CLAP:  11%|█▏        | 16/142 [00:26<03:23,  1.61s/it]Embedding audio with CLAP:  12%|█▏        | 17/142 [00:28<03:17,  1.58s/it]Embedding audio with CLAP:  13%|█▎        | 18/142 [00:29<03:16,  1.58s/it]Embedding audio with CLAP:  13%|█▎        | 19/142 [00:31<03:15,  1.59s/it]Embedding audio with CLAP:  14%|█▍        | 20/142 [00:32<03:12,  1.58s/it]Embedding audio with CLAP:  15%|█▍        | 21/142 [00:34<03:10,  1.57s/it]Embedding audio with CLAP:  15%|█▌        | 22/142 [00:36<03:08,  1.57s/it]Embedding audio with CLAP:  16%|█▌        | 23/142 [00:37<03:05,  1.56s/it]Embedding audio with CLAP:  17%|█▋        | 24/142 [00:39<03:02,  1.54s/it]Embedding audio with CLAP:  18%|█▊        | 25/142 [00:40<02:58,  1.53s/it]Embedding audio with CLAP:  18%|█▊        | 26/142 [00:42<03:01,  1.56s/it]Embedding audio with CLAP:  19%|█▉        | 27/142 [00:43<03:01,  1.58s/it]Embedding audio with CLAP:  20%|█▉        | 28/142 [00:45<03:01,  1.59s/it]Embedding audio with CLAP:  20%|██        | 29/142 [00:47<03:02,  1.61s/it]Embedding audio with CLAP:  21%|██        | 30/142 [00:48<02:54,  1.56s/it]Embedding audio with CLAP:  22%|██▏       | 31/142 [00:49<02:49,  1.53s/it]Embedding audio with CLAP:  23%|██▎       | 32/142 [00:51<02:47,  1.53s/it]Embedding audio with CLAP:  23%|██▎       | 33/142 [00:53<02:49,  1.56s/it]Embedding audio with CLAP:  24%|██▍       | 34/142 [00:54<02:48,  1.56s/it]Embedding audio with CLAP:  25%|██▍       | 35/142 [00:56<02:47,  1.56s/it]Embedding audio with CLAP:  25%|██▌       | 36/142 [00:57<02:43,  1.54s/it]Embedding audio with CLAP:  26%|██▌       | 37/142 [00:59<02:40,  1.52s/it]Embedding audio with CLAP:  27%|██▋       | 38/142 [01:00<02:42,  1.57s/it]Embedding audio with CLAP:  27%|██▋       | 39/142 [01:02<02:39,  1.55s/it]Embedding audio with CLAP:  28%|██▊       | 40/142 [01:03<02:36,  1.53s/it]Embedding audio with CLAP:  29%|██▉       | 41/142 [01:05<02:37,  1.56s/it]Embedding audio with CLAP:  30%|██▉       | 42/142 [01:07<02:33,  1.54s/it]Embedding audio with CLAP:  30%|███       | 43/142 [01:08<02:30,  1.52s/it]Embedding audio with CLAP:  31%|███       | 44/142 [01:10<02:28,  1.51s/it]Embedding audio with CLAP:  32%|███▏      | 45/142 [01:11<02:24,  1.49s/it]Embedding audio with CLAP:  32%|███▏      | 46/142 [01:13<02:26,  1.52s/it]Embedding audio with CLAP:  33%|███▎      | 47/142 [01:14<02:26,  1.54s/it]Embedding audio with CLAP:  34%|███▍      | 48/142 [01:16<02:23,  1.53s/it]Embedding audio with CLAP:  35%|███▍      | 49/142 [01:17<02:17,  1.48s/it]Embedding audio with CLAP:  35%|███▌      | 50/142 [01:19<02:18,  1.50s/it]Embedding audio with CLAP:  36%|███▌      | 51/142 [01:20<02:17,  1.51s/it]Embedding audio with CLAP:  37%|███▋      | 52/142 [01:21<02:13,  1.48s/it]Embedding audio with CLAP:  37%|███▋      | 53/142 [01:23<02:10,  1.46s/it]Embedding audio with CLAP:  38%|███▊      | 54/142 [01:24<02:12,  1.50s/it]Embedding audio with CLAP:  39%|███▊      | 55/142 [01:26<02:11,  1.51s/it]Embedding audio with CLAP:  39%|███▉      | 56/142 [01:27<02:07,  1.48s/it]Embedding audio with CLAP:  40%|████      | 57/142 [01:29<02:10,  1.53s/it]Embedding audio with CLAP:  41%|████      | 58/142 [01:31<02:06,  1.51s/it]Embedding audio with CLAP:  42%|████▏     | 59/142 [01:32<02:08,  1.54s/it]Embedding audio with CLAP:  42%|████▏     | 60/142 [01:34<02:02,  1.49s/it]Embedding audio with CLAP:  43%|████▎     | 61/142 [01:35<02:00,  1.49s/it]Embedding audio with CLAP:  44%|████▎     | 62/142 [01:37<02:02,  1.53s/it]Embedding audio with CLAP:  44%|████▍     | 63/142 [01:38<02:01,  1.54s/it]Embedding audio with CLAP:  45%|████▌     | 64/142 [01:40<02:00,  1.55s/it]Embedding audio with CLAP:  46%|████▌     | 65/142 [01:41<01:58,  1.54s/it]Embedding audio with CLAP:  46%|████▋     | 66/142 [01:43<01:57,  1.55s/it]Embedding audio with CLAP:  47%|████▋     | 67/142 [01:45<01:58,  1.59s/it]Embedding audio with CLAP:  48%|████▊     | 68/142 [01:46<01:56,  1.58s/it]Embedding audio with CLAP:  49%|████▊     | 69/142 [01:48<01:51,  1.53s/it]Embedding audio with CLAP:  49%|████▉     | 70/142 [01:49<01:48,  1.51s/it]Embedding audio with CLAP:  50%|█████     | 71/142 [01:51<01:49,  1.54s/it]Embedding audio with CLAP:  51%|█████     | 72/142 [01:52<01:47,  1.53s/it]Embedding audio with CLAP:  51%|█████▏    | 73/142 [01:54<01:45,  1.53s/it]Embedding audio with CLAP:  52%|█████▏    | 74/142 [01:55<01:43,  1.53s/it]Embedding audio with CLAP:  53%|█████▎    | 75/142 [01:57<01:41,  1.52s/it]Embedding audio with CLAP:  54%|█████▎    | 76/142 [01:58<01:41,  1.54s/it]Embedding audio with CLAP:  54%|█████▍    | 77/142 [02:00<01:40,  1.54s/it]Embedding audio with CLAP:  55%|█████▍    | 78/142 [02:01<01:38,  1.54s/it]Embedding audio with CLAP:  56%|█████▌    | 79/142 [02:03<01:35,  1.51s/it]Embedding audio with CLAP:  56%|█████▋    | 80/142 [02:04<01:34,  1.53s/it]Embedding audio with CLAP:  57%|█████▋    | 81/142 [02:06<01:34,  1.54s/it]Embedding audio with CLAP:  58%|█████▊    | 82/142 [02:08<01:33,  1.56s/it]Embedding audio with CLAP:  58%|█████▊    | 83/142 [02:09<01:30,  1.54s/it]Embedding audio with CLAP:  59%|█████▉    | 84/142 [02:10<01:26,  1.50s/it]Embedding audio with CLAP:  60%|█████▉    | 85/142 [02:12<01:25,  1.49s/it]Embedding audio with CLAP:  61%|██████    | 86/142 [02:13<01:24,  1.50s/it]Embedding audio with CLAP:  61%|██████▏   | 87/142 [02:15<01:23,  1.52s/it]Embedding audio with CLAP:  62%|██████▏   | 88/142 [02:16<01:21,  1.51s/it]Embedding audio with CLAP:  63%|██████▎   | 89/142 [02:18<01:20,  1.52s/it]Embedding audio with CLAP:  63%|██████▎   | 90/142 [02:20<01:18,  1.52s/it]Embedding audio with CLAP:  64%|██████▍   | 91/142 [02:21<01:17,  1.52s/it]Embedding audio with CLAP:  65%|██████▍   | 92/142 [02:23<01:16,  1.53s/it]Embedding audio with CLAP:  65%|██████▌   | 93/142 [02:24<01:14,  1.52s/it]Embedding audio with CLAP:  66%|██████▌   | 94/142 [02:26<01:14,  1.56s/it]Embedding audio with CLAP:  67%|██████▋   | 95/142 [02:27<01:14,  1.59s/it]Embedding audio with CLAP:  68%|██████▊   | 96/142 [02:29<01:13,  1.60s/it]Embedding audio with CLAP:  68%|██████▊   | 97/142 [02:30<01:09,  1.55s/it]Embedding audio with CLAP:  69%|██████▉   | 98/142 [02:32<01:07,  1.52s/it]Embedding audio with CLAP:  70%|██████▉   | 99/142 [02:33<01:05,  1.51s/it]Embedding audio with CLAP:  70%|███████   | 100/142 [02:35<01:04,  1.53s/it]Embedding audio with CLAP:  71%|███████   | 101/142 [02:37<01:03,  1.54s/it]Embedding audio with CLAP:  72%|███████▏  | 102/142 [02:38<01:01,  1.53s/it]Embedding audio with CLAP:  73%|███████▎  | 103/142 [02:40<00:59,  1.54s/it]Embedding audio with CLAP:  73%|███████▎  | 104/142 [02:41<00:58,  1.54s/it]Embedding audio with CLAP:  74%|███████▍  | 105/142 [02:43<00:55,  1.51s/it]Embedding audio with CLAP:  75%|███████▍  | 106/142 [02:44<00:53,  1.49s/it]Embedding audio with CLAP:  75%|███████▌  | 107/142 [02:46<00:52,  1.50s/it]Embedding audio with CLAP:  76%|███████▌  | 108/142 [02:47<00:52,  1.55s/it]Embedding audio with CLAP:  77%|███████▋  | 109/142 [02:49<00:49,  1.51s/it]Embedding audio with CLAP:  77%|███████▋  | 110/142 [02:50<00:48,  1.50s/it]Embedding audio with CLAP:  78%|███████▊  | 111/142 [02:52<00:47,  1.53s/it]Embedding audio with CLAP:  79%|███████▉  | 112/142 [02:53<00:46,  1.54s/it]Embedding audio with CLAP:  80%|███████▉  | 113/142 [02:55<00:44,  1.55s/it]Embedding audio with CLAP:  80%|████████  | 114/142 [02:56<00:42,  1.51s/it]Embedding audio with CLAP:  81%|████████  | 115/142 [02:58<00:40,  1.51s/it]Embedding audio with CLAP:  82%|████████▏ | 116/142 [02:59<00:39,  1.52s/it]Embedding audio with CLAP:  82%|████████▏ | 117/142 [03:01<00:38,  1.52s/it]Embedding audio with CLAP:  83%|████████▎ | 118/142 [03:02<00:37,  1.55s/it]Embedding audio with CLAP:  84%|████████▍ | 119/142 [03:04<00:35,  1.54s/it]Embedding audio with CLAP:  85%|████████▍ | 120/142 [03:06<00:34,  1.58s/it]Embedding audio with CLAP:  85%|████████▌ | 121/142 [03:07<00:32,  1.53s/it]Embedding audio with CLAP:  86%|████████▌ | 122/142 [03:09<00:31,  1.57s/it]Embedding audio with CLAP:  87%|████████▋ | 123/142 [03:10<00:29,  1.58s/it]Embedding audio with CLAP:  87%|████████▋ | 124/142 [03:12<00:28,  1.56s/it]Embedding audio with CLAP:  88%|████████▊ | 125/142 [03:13<00:26,  1.53s/it]Embedding audio with CLAP:  89%|████████▊ | 126/142 [03:15<00:24,  1.52s/it]Embedding audio with CLAP:  89%|████████▉ | 127/142 [03:16<00:22,  1.47s/it]Embedding audio with CLAP:  90%|█████████ | 128/142 [03:18<00:21,  1.51s/it]Embedding audio with CLAP:  91%|█████████ | 129/142 [03:19<00:19,  1.50s/it]Embedding audio with CLAP:  92%|█████████▏| 130/142 [03:21<00:17,  1.49s/it]Embedding audio with CLAP:  92%|█████████▏| 131/142 [03:22<00:16,  1.50s/it]Embedding audio with CLAP:  93%|█████████▎| 132/142 [03:24<00:14,  1.49s/it]Embedding audio with CLAP:  94%|█████████▎| 133/142 [03:25<00:13,  1.52s/it]Embedding audio with CLAP:  94%|█████████▍| 134/142 [03:27<00:12,  1.51s/it]Embedding audio with CLAP:  95%|█████████▌| 135/142 [03:28<00:10,  1.55s/it]Embedding audio with CLAP:  96%|█████████▌| 136/142 [03:30<00:09,  1.57s/it]Embedding audio with CLAP:  96%|█████████▋| 137/142 [03:32<00:07,  1.60s/it]Embedding audio with CLAP:  97%|█████████▋| 138/142 [03:33<00:06,  1.59s/it]Embedding audio with CLAP:  98%|█████████▊| 139/142 [03:35<00:04,  1.58s/it]Embedding audio with CLAP:  99%|█████████▊| 140/142 [03:36<00:03,  1.57s/it]Embedding audio with CLAP:  99%|█████████▉| 141/142 [03:38<00:01,  1.55s/it]Embedding audio with CLAP: 100%|██████████| 142/142 [03:38<00:00,  1.19s/it]Embedding audio with CLAP: 100%|██████████| 142/142 [03:38<00:00,  1.54s/it]
+epoch   0  train_loss=0.0835  val_loss=0.0735
+epoch  10  train_loss=0.0635  val_loss=0.0549
+epoch  20  train_loss=0.0428  val_loss=0.0382
+epoch  30  train_loss=0.0361  val_loss=0.0342
+epoch  40  train_loss=0.0332  val_loss=0.0316
+epoch  50  train_loss=0.0312  val_loss=0.0306
+epoch  60  train_loss=0.0300  val_loss=0.0298
+epoch  70  train_loss=0.0284  val_loss=0.0295
+epoch  80  train_loss=0.0272  val_loss=0.0292
+epoch  90  train_loss=0.0263  val_loss=0.0288
+epoch 100  train_loss=0.0251  val_loss=0.0284
+epoch 110  train_loss=0.0237  val_loss=0.0282
+epoch 120  train_loss=0.0220  val_loss=0.0277
+epoch 130  train_loss=0.0203  val_loss=0.0277
+epoch 140  train_loss=0.0187  val_loss=0.0278
+epoch 150  train_loss=0.0177  val_loss=0.0281
+epoch 160  train_loss=0.0163  val_loss=0.0280
+epoch 170  train_loss=0.0156  val_loss=0.0286
+epoch 180  train_loss=0.0143  val_loss=0.0288
+epoch 190  train_loss=0.0138  val_loss=0.0292
+Best val MSE=0.0276; saved regressor to checkpoints/va_regressor.pt

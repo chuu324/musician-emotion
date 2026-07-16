@@ -1,0 +1,317 @@
+nohup: ignoring input
+/root/miniconda3/lib/python3.8/site-packages/torch/functional.py:513: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3609.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Load the specified checkpoint checkpoints/clap_weights/music_audioset_epoch_15_esc_90.14.pt from users.
+Load Checkpoint...
+/root/miniconda3/lib/python3.8/site-packages/laion_clap/clap_module/factory.py:52: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(checkpoint_path, map_location=map_location)
+[ClapEmbedder] load_ckpt failed; retrying with strict=False ...
+/root/autodl-tmp/musicgen-emotion/utils/va_regressor.py:95: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  raw = torch.load(ckpt_path, map_location="cpu")
+[ClapEmbedder] missing keys (503), e.g. ['logit_scale_a', 'logit_scale_t', 'audio_branch.spectrogram_extractor.stft.conv_real.weight']
+[ClapEmbedder] ignored unexpected keys: ['module.logit_scale_a', 'module.logit_scale_t', 'module.audio_branch.spectrogram_extractor.stft.conv_real.weight', 'module.audio_branch.spectrogram_extractor.stft.conv_imag.weight', 'module.audio_branch.logmel_extractor.melW', 'module.audio_branch.bn0.weight', 'module.audio_branch.bn0.bias', 'module.audio_branch.bn0.running_mean', 'module.audio_branch.bn0.running_var', 'module.audio_branch.bn0.num_batches_tracked', 'module.audio_branch.patch_embed.proj.weight', 'module.audio_branch.patch_embed.proj.bias', 'module.audio_branch.patch_embed.norm.weight', 'module.audio_branch.patch_embed.norm.bias', 'module.audio_branch.layers.0.blocks.0.norm1.weight', 'module.audio_branch.layers.0.blocks.0.norm1.bias', 'module.audio_branch.layers.0.blocks.0.attn.relative_position_bias_table', 'module.audio_branch.layers.0.blocks.0.attn.relative_position_index', 'module.audio_branch.layers.0.blocks.0.attn.qkv.weight', 'module.audio_branch.layers.0.blocks.0.attn.qkv.bias', 'module.audio_branch.layers.0.blocks.0.attn.proj.weight', 'module.audio_branch.layers.0.blocks.0.attn.proj.bias', 'module.audio_branch.layers.0.blocks.0.norm2.weight', 'module.audio_branch.layers.0.blocks.0.norm2.bias', 'module.audio_branch.layers.0.blocks.0.mlp.fc1.weight', 'module.audio_branch.layers.0.blocks.0.mlp.fc1.bias', 'module.audio_branch.layers.0.blocks.0.mlp.fc2.weight', 'module.audio_branch.layers.0.blocks.0.mlp.fc2.bias', 'module.audio_branch.layers.0.blocks.1.attn_mask', 'module.audio_branch.layers.0.blocks.1.norm1.weight', 'module.audio_branch.layers.0.blocks.1.norm1.bias', 'module.audio_branch.layers.0.blocks.1.attn.relative_position_bias_table', 'module.audio_branch.layers.0.blocks.1.attn.relative_position_index', 'module.audio_branch.layers.0.blocks.1.attn.qkv.weight', 'module.audio_branch.layers.0.blocks.1.attn.qkv.bias', 'module.audio_branch.layers.0.blocks.1.attn.proj.weight', 'module.audio_branch.layers.0.blocks.1.attn.proj.bias', 'module.audio_branch.layers.0.blocks.1.norm2.weight', 'module.audio_branch.layers.0.blocks.1.norm2.bias', 'module.audio_branch.layers.0.blocks.1.mlp.fc1.weight', 'module.audio_branch.layers.0.blocks.1.mlp.fc1.bias', 'module.audio_branch.layers.0.blocks.1.mlp.fc2.weight', 'module.audio_branch.layers.0.blocks.1.mlp.fc2.bias', 'module.audio_branch.layers.0.downsample.reduction.weight', 'module.audio_branch.layers.0.downsample.norm.weight', 'module.audio_branch.layers.0.downsample.norm.bias', 'module.audio_branch.layers.1.blocks.0.norm1.weight', 'module.audio_branch.layers.1.blocks.0.norm1.bias', 'module.audio_branch.layers.1.blocks.0.attn.relative_position_bias_table', 'module.audio_branch.layers.1.blocks.0.attn.relative_position_index', 'module.audio_branch.layers.1.blocks.0.attn.qkv.weight', 'module.audio_branch.layers.1.blocks.0.attn.qkv.bias', 'module.audio_branch.layers.1.blocks.0.attn.proj.weight', 'module.audio_branch.layers.1.blocks.0.attn.proj.bias', 'module.audio_branch.layers.1.blocks.0.norm2.weight', 'module.audio_branch.layers.1.blocks.0.norm2.bias', 'module.audio_branch.layers.1.blocks.0.mlp.fc1.weight', 'module.audio_branch.layers.1.blocks.0.mlp.fc1.bias', 'module.audio_branch.layers.1.blocks.0.mlp.fc2.weight', 'module.audio_branch.layers.1.blocks.0.mlp.fc2.bias', 'module.audio_branch.layers.1.blocks.1.attn_mask', 'module.audio_branch.layers.1.blocks.1.norm1.weight', 'module.audio_branch.layers.1.blocks.1.norm1.bias', 'module.audio_branch.layers.1.blocks.1.attn.relative_position_bias_table', 'module.audio_branch.layers.1.blocks.1.attn.relative_position_index', 'module.audio_branch.layers.1.blocks.1.attn.qkv.weight', 'module.audio_branch.layers.1.blocks.1.attn.qkv.bias', 'module.audio_branch.layers.1.blocks.1.attn.proj.weight', 'module.audio_branch.layers.1.blocks.1.attn.proj.bias', 'module.audio_branch.layers.1.blocks.1.norm2.weight', 'module.audio_branch.layers.1.blocks.1.norm2.bias', 'module.audio_branch.layers.1.blocks.1.mlp.fc1.weight', 'module.audio_branch.layers.1.blocks.1.mlp.fc1.bias', 'module.audio_branch.layers.1.blocks.1.mlp.fc2.weight', 'module.audio_branch.layers.1.blocks.1.mlp.fc2.bias', 'module.audio_branch.layers.1.downsample.reduction.weight', 'module.audio_branch.layers.1.downsample.norm.weight', 'module.audio_branch.layers.1.downsample.norm.bias', 'module.audio_branch.layers.2.blocks.0.norm1.weight', 'module.audio_branch.layers.2.blocks.0.norm1.bias', 'module.audio_branch.layers.2.blocks.0.attn.relative_position_bias_table', 'module.audio_branch.layers.2.blocks.0.attn.relative_position_index', 'module.audio_branch.layers.2.blocks.0.attn.qkv.weight', 'module.audio_branch.layers.2.blocks.0.attn.qkv.bias', 'module.audio_branch.layers.2.blocks.0.attn.proj.weight', 'module.audio_branch.layers.2.blocks.0.attn.proj.bias', 'module.audio_branch.layers.2.blocks.0.norm2.weight', 'module.audio_branch.layers.2.blocks.0.norm2.bias', 'module.audio_branch.layers.2.blocks.0.mlp.fc1.weight', 'module.audio_branch.layers.2.blocks.0.mlp.fc1.bias', 'module.audio_branch.layers.2.blocks.0.mlp.fc2.weight', 'module.audio_branch.layers.2.blocks.0.mlp.fc2.bias', 'module.audio_branch.layers.2.blocks.1.attn_mask', 'module.audio_branch.layers.2.blocks.1.norm1.weight', 'module.audio_branch.layers.2.blocks.1.norm1.bias', 'module.audio_branch.layers.2.blocks.1.attn.relative_position_bias_table', 'module.audio_branch.layers.2.blocks.1.attn.relative_position_index', 'module.audio_branch.layers.2.blocks.1.attn.qkv.weight', 'module.audio_branch.layers.2.blocks.1.attn.qkv.bias', 'module.audio_branch.layers.2.blocks.1.attn.proj.weight', 'module.audio_branch.layers.2.blocks.1.attn.proj.bias', 'module.audio_branch.layers.2.blocks.1.norm2.weight', 'module.audio_branch.layers.2.blocks.1.norm2.bias', 'module.audio_branch.layers.2.blocks.1.mlp.fc1.weight', 'module.audio_branch.layers.2.blocks.1.mlp.fc1.bias', 'module.audio_branch.layers.2.blocks.1.mlp.fc2.weight', 'module.audio_branch.layers.2.blocks.1.mlp.fc2.bias', 'module.audio_branch.layers.2.blocks.2.norm1.weight', 'module.audio_branch.layers.2.blocks.2.norm1.bias', 'module.audio_branch.layers.2.blocks.2.attn.relative_position_bias_table', 'module.audio_branch.layers.2.blocks.2.attn.relative_position_index', 'module.audio_branch.layers.2.blocks.2.attn.qkv.weight', 'module.audio_branch.layers.2.blocks.2.attn.qkv.bias', 'module.audio_branch.layers.2.blocks.2.attn.proj.weight', 'module.audio_branch.layers.2.blocks.2.attn.proj.bias', 'module.audio_branch.layers.2.blocks.2.norm2.weight', 'module.audio_branch.layers.2.blocks.2.norm2.bias', 'module.audio_branch.layers.2.blocks.2.mlp.fc1.weight', 'module.audio_branch.layers.2.blocks.2.mlp.fc1.bias', 'module.audio_branch.layers.2.blocks.2.mlp.fc2.weight', 'module.audio_branch.layers.2.blocks.2.mlp.fc2.bias', 'module.audio_branch.layers.2.blocks.3.attn_mask', 'module.audio_branch.layers.2.blocks.3.norm1.weight', 'module.audio_branch.layers.2.blocks.3.norm1.bias', 'module.audio_branch.layers.2.blocks.3.attn.relative_position_bias_table', 'module.audio_branch.layers.2.blocks.3.attn.relative_position_index', 'module.audio_branch.layers.2.blocks.3.attn.qkv.weight', 'module.audio_branch.layers.2.blocks.3.attn.qkv.bias', 'module.audio_branch.layers.2.blocks.3.attn.proj.weight', 'module.audio_branch.layers.2.blocks.3.attn.proj.bias', 'module.audio_branch.layers.2.blocks.3.norm2.weight', 'module.audio_branch.layers.2.blocks.3.norm2.bias', 'module.audio_branch.layers.2.blocks.3.mlp.fc1.weight', 'module.audio_branch.layers.2.blocks.3.mlp.fc1.bias', 'module.audio_branch.layers.2.blocks.3.mlp.fc2.weight', 'module.audio_branch.layers.2.blocks.3.mlp.fc2.bias', 'module.audio_branch.layers.2.blocks.4.norm1.weight', 'module.audio_branch.layers.2.blocks.4.norm1.bias', 'module.audio_branch.layers.2.blocks.4.attn.relative_position_bias_table', 'module.audio_branch.layers.2.blocks.4.attn.relative_position_index', 'module.audio_branch.layers.2.blocks.4.attn.qkv.weight', 'module.audio_branch.layers.2.blocks.4.attn.qkv.bias', 'module.audio_branch.layers.2.blocks.4.attn.proj.weight', 'module.audio_branch.layers.2.blocks.4.attn.proj.bias', 'module.audio_branch.layers.2.blocks.4.norm2.weight', 'module.audio_branch.layers.2.blocks.4.norm2.bias', 'module.audio_branch.layers.2.blocks.4.mlp.fc1.weight', 'module.audio_branch.layers.2.blocks.4.mlp.fc1.bias', 'module.audio_branch.layers.2.blocks.4.mlp.fc2.weight', 'module.audio_branch.layers.2.blocks.4.mlp.fc2.bias', 'module.audio_branch.layers.2.blocks.5.attn_mask', 'module.audio_branch.layers.2.blocks.5.norm1.weight', 'module.audio_branch.layers.2.blocks.5.norm1.bias', 'module.audio_branch.layers.2.blocks.5.attn.relative_position_bias_table', 'module.audio_branch.layers.2.blocks.5.attn.relative_position_index', 'module.audio_branch.layers.2.blocks.5.attn.qkv.weight', 'module.audio_branch.layers.2.blocks.5.attn.qkv.bias', 'module.audio_branch.layers.2.blocks.5.attn.proj.weight', 'module.audio_branch.layers.2.blocks.5.attn.proj.bias', 'module.audio_branch.layers.2.blocks.5.norm2.weight', 'module.audio_branch.layers.2.blocks.5.norm2.bias', 'module.audio_branch.layers.2.blocks.5.mlp.fc1.weight', 'module.audio_branch.layers.2.blocks.5.mlp.fc1.bias', 'module.audio_branch.layers.2.blocks.5.mlp.fc2.weight', 'module.audio_branch.layers.2.blocks.5.mlp.fc2.bias', 'module.audio_branch.layers.2.blocks.6.norm1.weight', 'module.audio_branch.layers.2.blocks.6.norm1.bias', 'module.audio_branch.layers.2.blocks.6.attn.relative_position_bias_table', 'module.audio_branch.layers.2.blocks.6.attn.relative_position_index', 'module.audio_branch.layers.2.blocks.6.attn.qkv.weight', 'module.audio_branch.layers.2.blocks.6.attn.qkv.bias', 'module.audio_branch.layers.2.blocks.6.attn.proj.weight', 'module.audio_branch.layers.2.blocks.6.attn.proj.bias', 'module.audio_branch.layers.2.blocks.6.norm2.weight', 'module.audio_branch.layers.2.blocks.6.norm2.bias', 'module.audio_branch.layers.2.blocks.6.mlp.fc1.weight', 'module.audio_branch.layers.2.blocks.6.mlp.fc1.bias', 'module.audio_branch.layers.2.blocks.6.mlp.fc2.weight', 'module.audio_branch.layers.2.blocks.6.mlp.fc2.bias', 'module.audio_branch.layers.2.blocks.7.attn_mask', 'module.audio_branch.layers.2.blocks.7.norm1.weight', 'module.audio_branch.layers.2.blocks.7.norm1.bias', 'module.audio_branch.layers.2.blocks.7.attn.relative_position_bias_table', 'module.audio_branch.layers.2.blocks.7.attn.relative_position_index', 'module.audio_branch.layers.2.blocks.7.attn.qkv.weight', 'module.audio_branch.layers.2.blocks.7.attn.qkv.bias', 'module.audio_branch.layers.2.blocks.7.attn.proj.weight', 'module.audio_branch.layers.2.blocks.7.attn.proj.bias', 'module.audio_branch.layers.2.blocks.7.norm2.weight', 'module.audio_branch.layers.2.blocks.7.norm2.bias', 'module.audio_branch.layers.2.blocks.7.mlp.fc1.weight', 'module.audio_branch.layers.2.blocks.7.mlp.fc1.bias', 'module.audio_branch.layers.2.blocks.7.mlp.fc2.weight', 'module.audio_branch.layers.2.blocks.7.mlp.fc2.bias', 'module.audio_branch.layers.2.blocks.8.norm1.weight', 'module.audio_branch.layers.2.blocks.8.norm1.bias', 'module.audio_branch.layers.2.blocks.8.attn.relative_position_bias_table', 'module.audio_branch.layers.2.blocks.8.attn.relative_position_index', 'module.audio_branch.layers.2.blocks.8.attn.qkv.weight', 'module.audio_branch.layers.2.blocks.8.attn.qkv.bias', 'module.audio_branch.layers.2.blocks.8.attn.proj.weight', 'module.audio_branch.layers.2.blocks.8.attn.proj.bias', 'module.audio_branch.layers.2.blocks.8.norm2.weight', 'module.audio_branch.layers.2.blocks.8.norm2.bias', 'module.audio_branch.layers.2.blocks.8.mlp.fc1.weight', 'module.audio_branch.layers.2.blocks.8.mlp.fc1.bias', 'module.audio_branch.layers.2.blocks.8.mlp.fc2.weight', 'module.audio_branch.layers.2.blocks.8.mlp.fc2.bias', 'module.audio_branch.layers.2.blocks.9.attn_mask', 'module.audio_branch.layers.2.blocks.9.norm1.weight', 'module.audio_branch.layers.2.blocks.9.norm1.bias', 'module.audio_branch.layers.2.blocks.9.attn.relative_position_bias_table', 'module.audio_branch.layers.2.blocks.9.attn.relative_position_index', 'module.audio_branch.layers.2.blocks.9.attn.qkv.weight', 'module.audio_branch.layers.2.blocks.9.attn.qkv.bias', 'module.audio_branch.layers.2.blocks.9.attn.proj.weight', 'module.audio_branch.layers.2.blocks.9.attn.proj.bias', 'module.audio_branch.layers.2.blocks.9.norm2.weight', 'module.audio_branch.layers.2.blocks.9.norm2.bias', 'module.audio_branch.layers.2.blocks.9.mlp.fc1.weight', 'module.audio_branch.layers.2.blocks.9.mlp.fc1.bias', 'module.audio_branch.layers.2.blocks.9.mlp.fc2.weight', 'module.audio_branch.layers.2.blocks.9.mlp.fc2.bias', 'module.audio_branch.layers.2.blocks.10.norm1.weight', 'module.audio_branch.layers.2.blocks.10.norm1.bias', 'module.audio_branch.layers.2.blocks.10.attn.relative_position_bias_table', 'module.audio_branch.layers.2.blocks.10.attn.relative_position_index', 'module.audio_branch.layers.2.blocks.10.attn.qkv.weight', 'module.audio_branch.layers.2.blocks.10.attn.qkv.bias', 'module.audio_branch.layers.2.blocks.10.attn.proj.weight', 'module.audio_branch.layers.2.blocks.10.attn.proj.bias', 'module.audio_branch.layers.2.blocks.10.norm2.weight', 'module.audio_branch.layers.2.blocks.10.norm2.bias', 'module.audio_branch.layers.2.blocks.10.mlp.fc1.weight', 'module.audio_branch.layers.2.blocks.10.mlp.fc1.bias', 'module.audio_branch.layers.2.blocks.10.mlp.fc2.weight', 'module.audio_branch.layers.2.blocks.10.mlp.fc2.bias', 'module.audio_branch.layers.2.blocks.11.attn_mask', 'module.audio_branch.layers.2.blocks.11.norm1.weight', 'module.audio_branch.layers.2.blocks.11.norm1.bias', 'module.audio_branch.layers.2.blocks.11.attn.relative_position_bias_table', 'module.audio_branch.layers.2.blocks.11.attn.relative_position_index', 'module.audio_branch.layers.2.blocks.11.attn.qkv.weight', 'module.audio_branch.layers.2.blocks.11.attn.qkv.bias', 'module.audio_branch.layers.2.blocks.11.attn.proj.weight', 'module.audio_branch.layers.2.blocks.11.attn.proj.bias', 'module.audio_branch.layers.2.blocks.11.norm2.weight', 'module.audio_branch.layers.2.blocks.11.norm2.bias', 'module.audio_branch.layers.2.blocks.11.mlp.fc1.weight', 'module.audio_branch.layers.2.blocks.11.mlp.fc1.bias', 'module.audio_branch.layers.2.blocks.11.mlp.fc2.weight', 'module.audio_branch.layers.2.blocks.11.mlp.fc2.bias', 'module.audio_branch.layers.2.downsample.reduction.weight', 'module.audio_branch.layers.2.downsample.norm.weight', 'module.audio_branch.layers.2.downsample.norm.bias', 'module.audio_branch.layers.3.blocks.0.norm1.weight', 'module.audio_branch.layers.3.blocks.0.norm1.bias', 'module.audio_branch.layers.3.blocks.0.attn.relative_position_bias_table', 'module.audio_branch.layers.3.blocks.0.attn.relative_position_index', 'module.audio_branch.layers.3.blocks.0.attn.qkv.weight', 'module.audio_branch.layers.3.blocks.0.attn.qkv.bias', 'module.audio_branch.layers.3.blocks.0.attn.proj.weight', 'module.audio_branch.layers.3.blocks.0.attn.proj.bias', 'module.audio_branch.layers.3.blocks.0.norm2.weight', 'module.audio_branch.layers.3.blocks.0.norm2.bias', 'module.audio_branch.layers.3.blocks.0.mlp.fc1.weight', 'module.audio_branch.layers.3.blocks.0.mlp.fc1.bias', 'module.audio_branch.layers.3.blocks.0.mlp.fc2.weight', 'module.audio_branch.layers.3.blocks.0.mlp.fc2.bias', 'module.audio_branch.layers.3.blocks.1.norm1.weight', 'module.audio_branch.layers.3.blocks.1.norm1.bias', 'module.audio_branch.layers.3.blocks.1.attn.relative_position_bias_table', 'module.audio_branch.layers.3.blocks.1.attn.relative_position_index', 'module.audio_branch.layers.3.blocks.1.attn.qkv.weight', 'module.audio_branch.layers.3.blocks.1.attn.qkv.bias', 'module.audio_branch.layers.3.blocks.1.attn.proj.weight', 'module.audio_branch.layers.3.blocks.1.attn.proj.bias', 'module.audio_branch.layers.3.blocks.1.norm2.weight', 'module.audio_branch.layers.3.blocks.1.norm2.bias', 'module.audio_branch.layers.3.blocks.1.mlp.fc1.weight', 'module.audio_branch.layers.3.blocks.1.mlp.fc1.bias', 'module.audio_branch.layers.3.blocks.1.mlp.fc2.weight', 'module.audio_branch.layers.3.blocks.1.mlp.fc2.bias', 'module.audio_branch.norm.weight', 'module.audio_branch.norm.bias', 'module.audio_branch.tscam_conv.weight', 'module.audio_branch.tscam_conv.bias', 'module.audio_branch.head.weight', 'module.audio_branch.head.bias', 'module.text_branch.embeddings.word_embeddings.weight', 'module.text_branch.embeddings.position_embeddings.weight', 'module.text_branch.embeddings.token_type_embeddings.weight', 'module.text_branch.embeddings.LayerNorm.weight', 'module.text_branch.embeddings.LayerNorm.bias', 'module.text_branch.encoder.layer.0.attention.self.query.weight', 'module.text_branch.encoder.layer.0.attention.self.query.bias', 'module.text_branch.encoder.layer.0.attention.self.key.weight', 'module.text_branch.encoder.layer.0.attention.self.key.bias', 'module.text_branch.encoder.layer.0.attention.self.value.weight', 'module.text_branch.encoder.layer.0.attention.self.value.bias', 'module.text_branch.encoder.layer.0.attention.output.dense.weight', 'module.text_branch.encoder.layer.0.attention.output.dense.bias', 'module.text_branch.encoder.layer.0.attention.output.LayerNorm.weight', 'module.text_branch.encoder.layer.0.attention.output.LayerNorm.bias', 'module.text_branch.encoder.layer.0.intermediate.dense.weight', 'module.text_branch.encoder.layer.0.intermediate.dense.bias', 'module.text_branch.encoder.layer.0.output.dense.weight', 'module.text_branch.encoder.layer.0.output.dense.bias', 'module.text_branch.encoder.layer.0.output.LayerNorm.weight', 'module.text_branch.encoder.layer.0.output.LayerNorm.bias', 'module.text_branch.encoder.layer.1.attention.self.query.weight', 'module.text_branch.encoder.layer.1.attention.self.query.bias', 'module.text_branch.encoder.layer.1.attention.self.key.weight', 'module.text_branch.encoder.layer.1.attention.self.key.bias', 'module.text_branch.encoder.layer.1.attention.self.value.weight', 'module.text_branch.encoder.layer.1.attention.self.value.bias', 'module.text_branch.encoder.layer.1.attention.output.dense.weight', 'module.text_branch.encoder.layer.1.attention.output.dense.bias', 'module.text_branch.encoder.layer.1.attention.output.LayerNorm.weight', 'module.text_branch.encoder.layer.1.attention.output.LayerNorm.bias', 'module.text_branch.encoder.layer.1.intermediate.dense.weight', 'module.text_branch.encoder.layer.1.intermediate.dense.bias', 'module.text_branch.encoder.layer.1.output.dense.weight', 'module.text_branch.encoder.layer.1.output.dense.bias', 'module.text_branch.encoder.layer.1.output.LayerNorm.weight', 'module.text_branch.encoder.layer.1.output.LayerNorm.bias', 'module.text_branch.encoder.layer.2.attention.self.query.weight', 'module.text_branch.encoder.layer.2.attention.self.query.bias', 'module.text_branch.encoder.layer.2.attention.self.key.weight', 'module.text_branch.encoder.layer.2.attention.self.key.bias', 'module.text_branch.encoder.layer.2.attention.self.value.weight', 'module.text_branch.encoder.layer.2.attention.self.value.bias', 'module.text_branch.encoder.layer.2.attention.output.dense.weight', 'module.text_branch.encoder.layer.2.attention.output.dense.bias', 'module.text_branch.encoder.layer.2.attention.output.LayerNorm.weight', 'module.text_branch.encoder.layer.2.attention.output.LayerNorm.bias', 'module.text_branch.encoder.layer.2.intermediate.dense.weight', 'module.text_branch.encoder.layer.2.intermediate.dense.bias', 'module.text_branch.encoder.layer.2.output.dense.weight', 'module.text_branch.encoder.layer.2.output.dense.bias', 'module.text_branch.encoder.layer.2.output.LayerNorm.weight', 'module.text_branch.encoder.layer.2.output.LayerNorm.bias', 'module.text_branch.encoder.layer.3.attention.self.query.weight', 'module.text_branch.encoder.layer.3.attention.self.query.bias', 'module.text_branch.encoder.layer.3.attention.self.key.weight', 'module.text_branch.encoder.layer.3.attention.self.key.bias', 'module.text_branch.encoder.layer.3.attention.self.value.weight', 'module.text_branch.encoder.layer.3.attention.self.value.bias', 'module.text_branch.encoder.layer.3.attention.output.dense.weight', 'module.text_branch.encoder.layer.3.attention.output.dense.bias', 'module.text_branch.encoder.layer.3.attention.output.LayerNorm.weight', 'module.text_branch.encoder.layer.3.attention.output.LayerNorm.bias', 'module.text_branch.encoder.layer.3.intermediate.dense.weight', 'module.text_branch.encoder.layer.3.intermediate.dense.bias', 'module.text_branch.encoder.layer.3.output.dense.weight', 'module.text_branch.encoder.layer.3.output.dense.bias', 'module.text_branch.encoder.layer.3.output.LayerNorm.weight', 'module.text_branch.encoder.layer.3.output.LayerNorm.bias', 'module.text_branch.encoder.layer.4.attention.self.query.weight', 'module.text_branch.encoder.layer.4.attention.self.query.bias', 'module.text_branch.encoder.layer.4.attention.self.key.weight', 'module.text_branch.encoder.layer.4.attention.self.key.bias', 'module.text_branch.encoder.layer.4.attention.self.value.weight', 'module.text_branch.encoder.layer.4.attention.self.value.bias', 'module.text_branch.encoder.layer.4.attention.output.dense.weight', 'module.text_branch.encoder.layer.4.attention.output.dense.bias', 'module.text_branch.encoder.layer.4.attention.output.LayerNorm.weight', 'module.text_branch.encoder.layer.4.attention.output.LayerNorm.bias', 'module.text_branch.encoder.layer.4.intermediate.dense.weight', 'module.text_branch.encoder.layer.4.intermediate.dense.bias', 'module.text_branch.encoder.layer.4.output.dense.weight', 'module.text_branch.encoder.layer.4.output.dense.bias', 'module.text_branch.encoder.layer.4.output.LayerNorm.weight', 'module.text_branch.encoder.layer.4.output.LayerNorm.bias', 'module.text_branch.encoder.layer.5.attention.self.query.weight', 'module.text_branch.encoder.layer.5.attention.self.query.bias', 'module.text_branch.encoder.layer.5.attention.self.key.weight', 'module.text_branch.encoder.layer.5.attention.self.key.bias', 'module.text_branch.encoder.layer.5.attention.self.value.weight', 'module.text_branch.encoder.layer.5.attention.self.value.bias', 'module.text_branch.encoder.layer.5.attention.output.dense.weight', 'module.text_branch.encoder.layer.5.attention.output.dense.bias', 'module.text_branch.encoder.layer.5.attention.output.LayerNorm.weight', 'module.text_branch.encoder.layer.5.attention.output.LayerNorm.bias', 'module.text_branch.encoder.layer.5.intermediate.dense.weight', 'module.text_branch.encoder.layer.5.intermediate.dense.bias', 'module.text_branch.encoder.layer.5.output.dense.weight', 'module.text_branch.encoder.layer.5.output.dense.bias', 'module.text_branch.encoder.layer.5.output.LayerNorm.weight', 'module.text_branch.encoder.layer.5.output.LayerNorm.bias', 'module.text_branch.encoder.layer.6.attention.self.query.weight', 'module.text_branch.encoder.layer.6.attention.self.query.bias', 'module.text_branch.encoder.layer.6.attention.self.key.weight', 'module.text_branch.encoder.layer.6.attention.self.key.bias', 'module.text_branch.encoder.layer.6.attention.self.value.weight', 'module.text_branch.encoder.layer.6.attention.self.value.bias', 'module.text_branch.encoder.layer.6.attention.output.dense.weight', 'module.text_branch.encoder.layer.6.attention.output.dense.bias', 'module.text_branch.encoder.layer.6.attention.output.LayerNorm.weight', 'module.text_branch.encoder.layer.6.attention.output.LayerNorm.bias', 'module.text_branch.encoder.layer.6.intermediate.dense.weight', 'module.text_branch.encoder.layer.6.intermediate.dense.bias', 'module.text_branch.encoder.layer.6.output.dense.weight', 'module.text_branch.encoder.layer.6.output.dense.bias', 'module.text_branch.encoder.layer.6.output.LayerNorm.weight', 'module.text_branch.encoder.layer.6.output.LayerNorm.bias', 'module.text_branch.encoder.layer.7.attention.self.query.weight', 'module.text_branch.encoder.layer.7.attention.self.query.bias', 'module.text_branch.encoder.layer.7.attention.self.key.weight', 'module.text_branch.encoder.layer.7.attention.self.key.bias', 'module.text_branch.encoder.layer.7.attention.self.value.weight', 'module.text_branch.encoder.layer.7.attention.self.value.bias', 'module.text_branch.encoder.layer.7.attention.output.dense.weight', 'module.text_branch.encoder.layer.7.attention.output.dense.bias', 'module.text_branch.encoder.layer.7.attention.output.LayerNorm.weight', 'module.text_branch.encoder.layer.7.attention.output.LayerNorm.bias', 'module.text_branch.encoder.layer.7.intermediate.dense.weight', 'module.text_branch.encoder.layer.7.intermediate.dense.bias', 'module.text_branch.encoder.layer.7.output.dense.weight', 'module.text_branch.encoder.layer.7.output.dense.bias', 'module.text_branch.encoder.layer.7.output.LayerNorm.weight', 'module.text_branch.encoder.layer.7.output.LayerNorm.bias', 'module.text_branch.encoder.layer.8.attention.self.query.weight', 'module.text_branch.encoder.layer.8.attention.self.query.bias', 'module.text_branch.encoder.layer.8.attention.self.key.weight', 'module.text_branch.encoder.layer.8.attention.self.key.bias', 'module.text_branch.encoder.layer.8.attention.self.value.weight', 'module.text_branch.encoder.layer.8.attention.self.value.bias', 'module.text_branch.encoder.layer.8.attention.output.dense.weight', 'module.text_branch.encoder.layer.8.attention.output.dense.bias', 'module.text_branch.encoder.layer.8.attention.output.LayerNorm.weight', 'module.text_branch.encoder.layer.8.attention.output.LayerNorm.bias', 'module.text_branch.encoder.layer.8.intermediate.dense.weight', 'module.text_branch.encoder.layer.8.intermediate.dense.bias', 'module.text_branch.encoder.layer.8.output.dense.weight', 'module.text_branch.encoder.layer.8.output.dense.bias', 'module.text_branch.encoder.layer.8.output.LayerNorm.weight', 'module.text_branch.encoder.layer.8.output.LayerNorm.bias', 'module.text_branch.encoder.layer.9.attention.self.query.weight', 'module.text_branch.encoder.layer.9.attention.self.query.bias', 'module.text_branch.encoder.layer.9.attention.self.key.weight', 'module.text_branch.encoder.layer.9.attention.self.key.bias', 'module.text_branch.encoder.layer.9.attention.self.value.weight', 'module.text_branch.encoder.layer.9.attention.self.value.bias', 'module.text_branch.encoder.layer.9.attention.output.dense.weight', 'module.text_branch.encoder.layer.9.attention.output.dense.bias', 'module.text_branch.encoder.layer.9.attention.output.LayerNorm.weight', 'module.text_branch.encoder.layer.9.attention.output.LayerNorm.bias', 'module.text_branch.encoder.layer.9.intermediate.dense.weight', 'module.text_branch.encoder.layer.9.intermediate.dense.bias', 'module.text_branch.encoder.layer.9.output.dense.weight', 'module.text_branch.encoder.layer.9.output.dense.bias', 'module.text_branch.encoder.layer.9.output.LayerNorm.weight', 'module.text_branch.encoder.layer.9.output.LayerNorm.bias', 'module.text_branch.encoder.layer.10.attention.self.query.weight', 'module.text_branch.encoder.layer.10.attention.self.query.bias', 'module.text_branch.encoder.layer.10.attention.self.key.weight', 'module.text_branch.encoder.layer.10.attention.self.key.bias', 'module.text_branch.encoder.layer.10.attention.self.value.weight', 'module.text_branch.encoder.layer.10.attention.self.value.bias', 'module.text_branch.encoder.layer.10.attention.output.dense.weight', 'module.text_branch.encoder.layer.10.attention.output.dense.bias', 'module.text_branch.encoder.layer.10.attention.output.LayerNorm.weight', 'module.text_branch.encoder.layer.10.attention.output.LayerNorm.bias', 'module.text_branch.encoder.layer.10.intermediate.dense.weight', 'module.text_branch.encoder.layer.10.intermediate.dense.bias', 'module.text_branch.encoder.layer.10.output.dense.weight', 'module.text_branch.encoder.layer.10.output.dense.bias', 'module.text_branch.encoder.layer.10.output.LayerNorm.weight', 'module.text_branch.encoder.layer.10.output.LayerNorm.bias', 'module.text_branch.encoder.layer.11.attention.self.query.weight', 'module.text_branch.encoder.layer.11.attention.self.query.bias', 'module.text_branch.encoder.layer.11.attention.self.key.weight', 'module.text_branch.encoder.layer.11.attention.self.key.bias', 'module.text_branch.encoder.layer.11.attention.self.value.weight', 'module.text_branch.encoder.layer.11.attention.self.value.bias', 'module.text_branch.encoder.layer.11.attention.output.dense.weight', 'module.text_branch.encoder.layer.11.attention.output.dense.bias', 'module.text_branch.encoder.layer.11.attention.output.LayerNorm.weight', 'module.text_branch.encoder.layer.11.attention.output.LayerNorm.bias', 'module.text_branch.encoder.layer.11.intermediate.dense.weight', 'module.text_branch.encoder.layer.11.intermediate.dense.bias', 'module.text_branch.encoder.layer.11.output.dense.weight', 'module.text_branch.encoder.layer.11.output.dense.bias', 'module.text_branch.encoder.layer.11.output.LayerNorm.weight', 'module.text_branch.encoder.layer.11.output.LayerNorm.bias', 'module.text_branch.pooler.dense.weight', 'module.text_branch.pooler.dense.bias', 'module.text_transform.sequential.0.weight', 'module.text_transform.sequential.0.bias', 'module.text_transform.sequential.3.weight', 'module.text_transform.sequential.3.bias', 'module.text_projection.0.weight', 'module.text_projection.0.bias', 'module.text_projection.2.weight', 'module.text_projection.2.bias', 'module.audio_transform.sequential.0.weight', 'module.audio_transform.sequential.0.bias', 'module.audio_transform.sequential.3.weight', 'module.audio_transform.sequential.3.bias', 'module.audio_projection.0.weight', 'module.audio_projection.0.bias', 'module.audio_projection.2.weight', 'module.audio_projection.2.bias']
+/root/autodl-tmp/musicgen-emotion/utils/va_regressor.py:231: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  ckpt = torch.load(checkpoint_path, map_location=device)
+Controllability eval: 1 prompts × 3 VA × 2 models, 5.0s each
+/root/miniconda3/lib/python3.8/site-packages/transformers/models/encodec/modeling_encodec.py:124: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  self.register_buffer("padding_total", torch.tensor(kernel_size - stride, dtype=torch.int64), persistent=False)
+Config of the text_encoder: <class 'transformers.models.t5.modeling_t5.T5EncoderModel'> is overwritten by shared text_encoder config: T5Config {
+  "_name_or_path": "t5-base",
+  "architectures": [
+    "T5ForConditionalGeneration"
+  ],
+  "classifier_dropout": 0.0,
+  "d_ff": 3072,
+  "d_kv": 64,
+  "d_model": 768,
+  "decoder_start_token_id": 0,
+  "dense_act_fn": "relu",
+  "dropout_rate": 0.1,
+  "eos_token_id": 1,
+  "feed_forward_proj": "relu",
+  "initializer_factor": 1.0,
+  "is_encoder_decoder": true,
+  "is_gated_act": false,
+  "layer_norm_epsilon": 1e-06,
+  "model_type": "t5",
+  "n_positions": 512,
+  "num_decoder_layers": 12,
+  "num_heads": 12,
+  "num_layers": 12,
+  "output_past": true,
+  "pad_token_id": 0,
+  "relative_attention_max_distance": 128,
+  "relative_attention_num_buckets": 32,
+  "task_specific_params": {
+    "summarization": {
+      "early_stopping": true,
+      "length_penalty": 2.0,
+      "max_length": 200,
+      "min_length": 30,
+      "no_repeat_ngram_size": 3,
+      "num_beams": 4,
+      "prefix": "summarize: "
+    },
+    "translation_en_to_de": {
+      "early_stopping": true,
+      "max_length": 300,
+      "num_beams": 4,
+      "prefix": "translate English to German: "
+    },
+    "translation_en_to_fr": {
+      "early_stopping": true,
+      "max_length": 300,
+      "num_beams": 4,
+      "prefix": "translate English to French: "
+    },
+    "translation_en_to_ro": {
+      "early_stopping": true,
+      "max_length": 300,
+      "num_beams": 4,
+      "prefix": "translate English to Romanian: "
+    }
+  },
+  "transformers_version": "4.46.3",
+  "use_cache": true,
+  "vocab_size": 32128
+}
+
+Config of the audio_encoder: <class 'transformers.models.encodec.modeling_encodec.EncodecModel'> is overwritten by shared audio_encoder config: EncodecConfig {
+  "_name_or_path": "facebook/encodec_32khz",
+  "architectures": [
+    "EncodecModel"
+  ],
+  "audio_channels": 1,
+  "chunk_length_s": null,
+  "codebook_dim": 128,
+  "codebook_size": 2048,
+  "compress": 2,
+  "dilation_growth_rate": 2,
+  "hidden_size": 128,
+  "kernel_size": 7,
+  "last_kernel_size": 7,
+  "model_type": "encodec",
+  "norm_type": "weight_norm",
+  "normalize": false,
+  "num_filters": 64,
+  "num_lstm_layers": 2,
+  "num_residual_layers": 1,
+  "overlap": null,
+  "pad_mode": "reflect",
+  "residual_kernel_size": 3,
+  "sampling_rate": 32000,
+  "target_bandwidths": [
+    2.2
+  ],
+  "torch_dtype": "float32",
+  "transformers_version": "4.46.3",
+  "trim_right_ratio": 1.0,
+  "upsampling_ratios": [
+    8,
+    5,
+    4,
+    4
+  ],
+  "use_causal_conv": false,
+  "use_conv_shortcut": false
+}
+
+Config of the decoder: <class 'transformers.models.musicgen.modeling_musicgen.MusicgenForCausalLM'> is overwritten by shared decoder config: MusicgenDecoderConfig {
+  "activation_dropout": 0.0,
+  "activation_function": "gelu",
+  "attention_dropout": 0.0,
+  "audio_channels": 1,
+  "bos_token_id": 2048,
+  "classifier_dropout": 0.0,
+  "dropout": 0.1,
+  "ffn_dim": 4096,
+  "hidden_size": 1024,
+  "initializer_factor": 0.02,
+  "layerdrop": 0.0,
+  "max_position_embeddings": 2048,
+  "model_type": "musicgen_decoder",
+  "num_attention_heads": 16,
+  "num_codebooks": 4,
+  "num_hidden_layers": 24,
+  "pad_token_id": 2048,
+  "scale_embedding": false,
+  "tie_word_embeddings": false,
+  "transformers_version": "4.46.3",
+  "use_cache": true,
+  "vocab_size": 2048
+}
+
+[MusicGenEmotion] trainable params: 115,969 / 589,097,795 (0.020%)
+scripts/va_controllability_eval.py:145: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  ckpt = torch.load(path, map_location=args.device)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+/root/miniconda3/lib/python3.8/site-packages/torchaudio/transforms/_transforms.py:580: UserWarning: Argument 'onesided' has been deprecated and has no influence on the behavior of this module.
+  warnings.warn(
+/root/miniconda3/lib/python3.8/site-packages/transformers/models/encodec/modeling_encodec.py:124: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  self.register_buffer("padding_total", torch.tensor(kernel_size - stride, dtype=torch.int64), persistent=False)
+Config of the text_encoder: <class 'transformers.models.t5.modeling_t5.T5EncoderModel'> is overwritten by shared text_encoder config: T5Config {
+  "_name_or_path": "t5-base",
+  "architectures": [
+    "T5ForConditionalGeneration"
+  ],
+  "classifier_dropout": 0.0,
+  "d_ff": 3072,
+  "d_kv": 64,
+  "d_model": 768,
+  "decoder_start_token_id": 0,
+  "dense_act_fn": "relu",
+  "dropout_rate": 0.1,
+  "eos_token_id": 1,
+  "feed_forward_proj": "relu",
+  "initializer_factor": 1.0,
+  "is_encoder_decoder": true,
+  "is_gated_act": false,
+  "layer_norm_epsilon": 1e-06,
+  "model_type": "t5",
+  "n_positions": 512,
+  "num_decoder_layers": 12,
+  "num_heads": 12,
+  "num_layers": 12,
+  "output_past": true,
+  "pad_token_id": 0,
+  "relative_attention_max_distance": 128,
+  "relative_attention_num_buckets": 32,
+  "task_specific_params": {
+    "summarization": {
+      "early_stopping": true,
+      "length_penalty": 2.0,
+      "max_length": 200,
+      "min_length": 30,
+      "no_repeat_ngram_size": 3,
+      "num_beams": 4,
+      "prefix": "summarize: "
+    },
+    "translation_en_to_de": {
+      "early_stopping": true,
+      "max_length": 300,
+      "num_beams": 4,
+      "prefix": "translate English to German: "
+    },
+    "translation_en_to_fr": {
+      "early_stopping": true,
+      "max_length": 300,
+      "num_beams": 4,
+      "prefix": "translate English to French: "
+    },
+    "translation_en_to_ro": {
+      "early_stopping": true,
+      "max_length": 300,
+      "num_beams": 4,
+      "prefix": "translate English to Romanian: "
+    }
+  },
+  "transformers_version": "4.46.3",
+  "use_cache": true,
+  "vocab_size": 32128
+}
+
+Config of the audio_encoder: <class 'transformers.models.encodec.modeling_encodec.EncodecModel'> is overwritten by shared audio_encoder config: EncodecConfig {
+  "_name_or_path": "facebook/encodec_32khz",
+  "architectures": [
+    "EncodecModel"
+  ],
+  "audio_channels": 1,
+  "chunk_length_s": null,
+  "codebook_dim": 128,
+  "codebook_size": 2048,
+  "compress": 2,
+  "dilation_growth_rate": 2,
+  "hidden_size": 128,
+  "kernel_size": 7,
+  "last_kernel_size": 7,
+  "model_type": "encodec",
+  "norm_type": "weight_norm",
+  "normalize": false,
+  "num_filters": 64,
+  "num_lstm_layers": 2,
+  "num_residual_layers": 1,
+  "overlap": null,
+  "pad_mode": "reflect",
+  "residual_kernel_size": 3,
+  "sampling_rate": 32000,
+  "target_bandwidths": [
+    2.2
+  ],
+  "torch_dtype": "float32",
+  "transformers_version": "4.46.3",
+  "trim_right_ratio": 1.0,
+  "upsampling_ratios": [
+    8,
+    5,
+    4,
+    4
+  ],
+  "use_causal_conv": false,
+  "use_conv_shortcut": false
+}
+
+Config of the decoder: <class 'transformers.models.musicgen.modeling_musicgen.MusicgenForCausalLM'> is overwritten by shared decoder config: MusicgenDecoderConfig {
+  "activation_dropout": 0.0,
+  "activation_function": "gelu",
+  "attention_dropout": 0.0,
+  "audio_channels": 1,
+  "bos_token_id": 2048,
+  "classifier_dropout": 0.0,
+  "dropout": 0.1,
+  "ffn_dim": 4096,
+  "hidden_size": 1024,
+  "initializer_factor": 0.02,
+  "layerdrop": 0.0,
+  "max_position_embeddings": 2048,
+  "model_type": "musicgen_decoder",
+  "num_attention_heads": 16,
+  "num_codebooks": 4,
+  "num_hidden_layers": 24,
+  "pad_token_id": 2048,
+  "scale_embedding": false,
+  "tie_word_embeddings": false,
+  "transformers_version": "4.46.3",
+  "use_cache": true,
+  "vocab_size": 2048
+}
+
+[MusicGenEmotion] trainable params: 115,969 / 589,097,795 (0.020%)
+scripts/va_controllability_eval.py:145: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  ckpt = torch.load(path, map_location=args.device)
+{
+  "ours": {
+    "n_prompts": 1,
+    "mean_valence_spread_low_vs_high": 0.18094046413898468,
+    "mean_arousal_spread_low_vs_high": 0.19123928993940353,
+    "pearson_target_vs_pred_valence": 0.860577530863315,
+    "pearson_target_vs_pred_arousal": 0.6223216119310498
+  },
+  "baseline": {
+    "n_prompts": 1,
+    "mean_valence_spread_low_vs_high": 0.20130353420972824,
+    "mean_arousal_spread_low_vs_high": 0.2461571991443634,
+    "pearson_target_vs_pred_valence": -0.9317043972581971,
+    "pearson_target_vs_pred_arousal": -0.9992592443901229
+  }
+}
+Written to eval_outputs/va_controllability.json
+
+Interpretation: trained adapter should show LARGER mean_*_spread and higher Pearson
+when only V-A changes. Standard evaluate CCC does not measure this.

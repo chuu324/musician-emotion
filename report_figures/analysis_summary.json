@@ -1,0 +1,62 @@
+{
+  "ours_results_json": {
+    "n_examples": 50,
+    "mean_clap_score": 0.1587415486574173,
+    "valence_mae": 0.15752390027046204,
+    "arousal_mae": 0.16650229692459106,
+    "valence_rmse": 0.21181146800518036,
+    "arousal_rmse": 0.1943056285381317,
+    "valence_ccc": 0.6151829398758777,
+    "arousal_ccc": 0.7156471542390714,
+    "fad": 0.08834531706179756,
+    "fad_method": "clap_embedder_local_pca",
+    "fad_pca_components": 49,
+    "fad_n_reference": 252,
+    "fad_n_generated": 50,
+    "fad_reference_dir": "/root/autodl-tmp/musicgen-emotion/data/fad_reference",
+    "fad_gen_dir": "/root/autodl-tmp/musicgen-emotion/eval_outputs/generated_wavs"
+  },
+  "baseline_results_json": {
+    "n_examples": 50,
+    "mean_clap_score": 0.14709222316741943,
+    "valence_mae": 0.16205577552318573,
+    "arousal_mae": 0.14819546043872833,
+    "valence_rmse": 0.19866713881492615,
+    "arousal_rmse": 0.17582595348358154,
+    "valence_ccc": 0.6725766810689856,
+    "arousal_ccc": 0.761627722476623,
+    "fad": 0.10019711356349464,
+    "fad_method": "clap_embedder_local_pca",
+    "fad_pca_components": 49,
+    "fad_n_reference": 252,
+    "fad_n_generated": 50,
+    "fad_reference_dir": "/root/autodl-tmp/musicgen-emotion/data/fad_reference",
+    "fad_gen_dir": "/root/autodl-tmp/musicgen-emotion/eval_outputs_baseline/generated_wavs"
+  },
+  "recomputed_from_wavs": {
+    "n": 50,
+    "valence_mae": 0.15752388536930084,
+    "arousal_mae": 0.16650228202342987,
+    "valence_ccc": 0.6151829508888758,
+    "arousal_ccc": 0.7156470166294008
+  },
+  "controllability": {
+    "path": "eval_outputs/va_controllability.json",
+    "ours": {
+      "n_prompts": 1,
+      "mean_valence_spread_low_vs_high": 0.18094046413898468,
+      "mean_arousal_spread_low_vs_high": 0.19123928993940353,
+      "pearson_target_vs_pred_valence": 0.860577530863315,
+      "pearson_target_vs_pred_arousal": 0.6223216119310498
+    },
+    "baseline": {
+      "n_prompts": 1,
+      "mean_valence_spread_low_vs_high": 0.20130353420972824,
+      "mean_arousal_spread_low_vs_high": 0.2461571991443634,
+      "pearson_target_vs_pred_valence": -0.9317043972581971,
+      "pearson_target_vs_pred_arousal": -0.9992592443901229
+    },
+    "fixed_prompt": "instrumental background music",
+    "guidance_scale": 1.0
+  }
+}

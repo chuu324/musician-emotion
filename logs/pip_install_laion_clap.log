@@ -1,0 +1,106 @@
+nohup: ignoring input
+Looking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple
+Collecting laion-clap
+  Using cached https://pypi.tuna.tsinghua.edu.cn/packages/ab/ea/6fb3d90bc1d85e6039506c248009e7f195456b81efa0a7aa413b3e13eb04/laion_clap-1.1.7-py3-none-any.whl (1.5 MB)
+Collecting ftfy
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/ed/46/14d230ad057048aea7ccd2f96a80905830866d281ea90a6662a825490659/ftfy-6.2.3-py3-none-any.whl (43 kB)
+Requirement already satisfied: tqdm in /root/miniconda3/lib/python3.8/site-packages (from laion-clap) (4.68.4)
+Collecting wandb
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/70/c8/1b758bd903afee000f023cd03f335ff328a21b3914f9f9deda49b1e57723/wandb-0.24.2-py3-none-manylinux_2_28_x86_64.whl (23.0 MB)
+Requirement already satisfied: transformers in /root/miniconda3/lib/python3.8/site-packages (from laion-clap) (4.46.3)
+Collecting wget
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/47/6a/62e288da7bcda82b935ff0c6cfe542970f04e29c756b0e147251b2fb251f/wget-3.2.zip (10 kB)
+Collecting braceexpand
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/fa/93/e8c04e80e82391a6e51f218ca49720f64236bc824e92152a2633b74cf7ab/braceexpand-0.1.7-py2.py3-none-any.whl (5.9 kB)
+Requirement already satisfied: librosa in /root/miniconda3/lib/python3.8/site-packages (from laion-clap) (0.11.0)
+Requirement already satisfied: scikit-learn in /root/miniconda3/lib/python3.8/site-packages (from laion-clap) (1.3.2)
+Collecting h5py
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/86/43/fd0bd74462b3c3fb35d98568935d3e5a435c8ec24d45ef408ac8869166af/h5py-3.11.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (5.3 MB)
+Requirement already satisfied: llvmlite in /root/miniconda3/lib/python3.8/site-packages (from laion-clap) (0.41.1)
+Requirement already satisfied: numpy<2.0.0,>=1.23.5 in /root/miniconda3/lib/python3.8/site-packages (from laion-clap) (1.24.2)
+Collecting progressbar
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/a3/a6/b8e451f6cff1c99b4747a2f7235aa904d2d49e8e1464e0b798272aa84358/progressbar-2.5.tar.gz (10 kB)
+Collecting webdataset
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/8e/84/cf2319c375f4e061f27354685295905dc81105d2a2d2239baaf6f6e73c87/webdataset-0.2.100-py3-none-any.whl (74 kB)
+Requirement already satisfied: regex in /root/miniconda3/lib/python3.8/site-packages (from laion-clap) (2024.11.6)
+Requirement already satisfied: soundfile in /root/miniconda3/lib/python3.8/site-packages (from laion-clap) (0.13.1)
+Requirement already satisfied: scipy in /root/miniconda3/lib/python3.8/site-packages (from laion-clap) (1.10.1)
+Collecting torchlibrosa
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/3e/af/ccf007edf442c3c0cd3a98be2c82bc99edc957c04436a759b6e1e01077e0/torchlibrosa-0.1.0-py3-none-any.whl (11 kB)
+Requirement already satisfied: pandas in /root/miniconda3/lib/python3.8/site-packages (from laion-clap) (2.0.3)
+Collecting wcwidth<0.3.0,>=0.2.12
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/af/b5/123f13c975e9f27ab9c0770f514345bd406d0e8d3b7a0723af9d43f710af/wcwidth-0.2.14-py2.py3-none-any.whl (37 kB)
+Requirement already satisfied: pooch>=1.1 in /root/miniconda3/lib/python3.8/site-packages (from librosa->laion-clap) (1.8.2)
+Requirement already satisfied: numba>=0.51.0 in /root/miniconda3/lib/python3.8/site-packages (from librosa->laion-clap) (0.58.1)
+Requirement already satisfied: msgpack>=1.0 in /root/miniconda3/lib/python3.8/site-packages (from librosa->laion-clap) (1.1.1)
+Requirement already satisfied: joblib>=1.0 in /root/miniconda3/lib/python3.8/site-packages (from librosa->laion-clap) (1.4.2)
+Requirement already satisfied: lazy_loader>=0.1 in /root/miniconda3/lib/python3.8/site-packages (from librosa->laion-clap) (0.4)
+Requirement already satisfied: audioread>=2.1.9 in /root/miniconda3/lib/python3.8/site-packages (from librosa->laion-clap) (3.0.1)
+Requirement already satisfied: decorator>=4.3.0 in /root/miniconda3/lib/python3.8/site-packages (from librosa->laion-clap) (5.1.1)
+Requirement already satisfied: soxr>=0.3.2 in /root/miniconda3/lib/python3.8/site-packages (from librosa->laion-clap) (0.3.7)
+Requirement already satisfied: typing_extensions>=4.1.1 in /root/miniconda3/lib/python3.8/site-packages (from librosa->laion-clap) (4.13.2)
+Requirement already satisfied: packaging in /root/miniconda3/lib/python3.8/site-packages (from lazy_loader>=0.1->librosa->laion-clap) (23.0)
+Requirement already satisfied: importlib-metadata in /root/miniconda3/lib/python3.8/site-packages (from numba>=0.51.0->librosa->laion-clap) (6.0.0)
+Requirement already satisfied: platformdirs>=2.5.0 in /root/miniconda3/lib/python3.8/site-packages (from pooch>=1.1->librosa->laion-clap) (3.1.1)
+Requirement already satisfied: requests>=2.19.0 in /root/miniconda3/lib/python3.8/site-packages (from pooch>=1.1->librosa->laion-clap) (2.32.4)
+Requirement already satisfied: idna<4,>=2.5 in /root/miniconda3/lib/python3.8/site-packages (from requests>=2.19.0->pooch>=1.1->librosa->laion-clap) (2.10)
+Requirement already satisfied: certifi>=2017.4.17 in /root/miniconda3/lib/python3.8/site-packages (from requests>=2.19.0->pooch>=1.1->librosa->laion-clap) (2021.5.30)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /root/miniconda3/lib/python3.8/site-packages (from requests>=2.19.0->pooch>=1.1->librosa->laion-clap) (1.26.6)
+Requirement already satisfied: charset_normalizer<4,>=2 in /root/miniconda3/lib/python3.8/site-packages (from requests>=2.19.0->pooch>=1.1->librosa->laion-clap) (3.1.0)
+Requirement already satisfied: threadpoolctl>=2.0.0 in /root/miniconda3/lib/python3.8/site-packages (from scikit-learn->laion-clap) (3.5.0)
+Requirement already satisfied: cffi>=1.0 in /root/miniconda3/lib/python3.8/site-packages (from soundfile->laion-clap) (1.14.6)
+Requirement already satisfied: pycparser in /root/miniconda3/lib/python3.8/site-packages (from cffi>=1.0->soundfile->laion-clap) (2.20)
+Requirement already satisfied: zipp>=0.5 in /root/miniconda3/lib/python3.8/site-packages (from importlib-metadata->numba>=0.51.0->librosa->laion-clap) (3.15.0)
+Requirement already satisfied: pytz>=2020.1 in /root/miniconda3/lib/python3.8/site-packages (from pandas->laion-clap) (2022.7.1)
+Requirement already satisfied: tzdata>=2022.1 in /root/miniconda3/lib/python3.8/site-packages (from pandas->laion-clap) (2026.3)
+Requirement already satisfied: python-dateutil>=2.8.2 in /root/miniconda3/lib/python3.8/site-packages (from pandas->laion-clap) (2.8.2)
+Requirement already satisfied: six>=1.5 in /root/miniconda3/lib/python3.8/site-packages (from python-dateutil>=2.8.2->pandas->laion-clap) (1.16.0)
+Requirement already satisfied: huggingface-hub<1.0,>=0.23.2 in /root/miniconda3/lib/python3.8/site-packages (from transformers->laion-clap) (0.36.2)
+Requirement already satisfied: tokenizers<0.21,>=0.20 in /root/miniconda3/lib/python3.8/site-packages (from transformers->laion-clap) (0.20.3)
+Requirement already satisfied: safetensors>=0.4.1 in /root/miniconda3/lib/python3.8/site-packages (from transformers->laion-clap) (0.5.3)
+Requirement already satisfied: pyyaml>=5.1 in /root/miniconda3/lib/python3.8/site-packages (from transformers->laion-clap) (6.0)
+Requirement already satisfied: filelock in /root/miniconda3/lib/python3.8/site-packages (from transformers->laion-clap) (3.10.0)
+Requirement already satisfied: hf-xet<2.0.0,>=1.1.3 in /root/miniconda3/lib/python3.8/site-packages (from huggingface-hub<1.0,>=0.23.2->transformers->laion-clap) (1.5.1)
+Requirement already satisfied: fsspec>=2023.5.0 in /root/miniconda3/lib/python3.8/site-packages (from huggingface-hub<1.0,>=0.23.2->transformers->laion-clap) (2024.9.0)
+Collecting eval-type-backport
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/50/a7/bb99bf5e6f78736ddb53480f2c3ff3702ffe2196a7c5e1661c03081d398e/eval_type_backport-0.4.0-py3-none-any.whl (6.4 kB)
+Requirement already satisfied: protobuf!=4.21.0,!=5.28.0,<7,>=3.12.0 in /root/miniconda3/lib/python3.8/site-packages (from wandb->laion-clap) (4.22.1)
+Collecting sentry-sdk>=2.0.0
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/21/3b/326ad4c03b5da89b5124c8890af66e8119c4d2e10abc0619e0d67d9f7c7f/sentry_sdk-2.65.0-py3-none-any.whl (503 kB)
+Collecting click>=8.0.1
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/7e/d4/7ebdbd03970677812aac39c869717059dbb71a4cfc033ca6e5221787892c/click-8.1.8-py3-none-any.whl (98 kB)
+Collecting gitpython!=3.1.29,>=1.0.0
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/f8/11/1232bb1ba52a230f20ff08e1b3df7cd9d43a71b61cc0a1c37941064fe4c7/gitpython-3.1.51-py3-none-any.whl (215 kB)
+Collecting pydantic<3
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/f4/3c/8cc1cc84deffa6e25d2d0c688ebb80635dfdbf1dbea3e30c541c8cf4d860/pydantic-2.10.6-py3-none-any.whl (431 kB)
+Collecting gitdb<5,>=4.0.1
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/a0/61/5c78b91c3143ed5c14207f463aecfc8f9dbb5092fb2869baf37c273b2705/gitdb-4.0.12-py3-none-any.whl (62 kB)
+Collecting smmap<6,>=3.0.1
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/c1/d4/59e74daffcb57a07668852eeeb6035af9f32cbfd7a1d2511f17d2fe6a738/smmap-5.0.3-py3-none-any.whl (24 kB)
+Collecting pydantic-core==2.27.2
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/f7/a3/5f19bc495793546825ab160e530330c2afcee2281c02b5ffafd0b32ac05e/pydantic_core-2.27.2-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.0 MB)
+Collecting annotated-types>=0.6.0
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/78/b6/6307fbef88d9b5ee7421e68d78a9f162e0da4900bc5f5793f6d3d0e34fb8/annotated_types-0.7.0-py3-none-any.whl (13 kB)
+Collecting urllib3<3,>=1.21.1
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/ce/d9/5f4c13cecde62396b0d3fe530a50ccea91e7dfc1ccf0e09c228841bb5ba8/urllib3-2.2.3-py3-none-any.whl (126 kB)
+Building wheels for collected packages: progressbar, wget
+  Building wheel for progressbar (setup.py): started
+  Building wheel for progressbar (setup.py): finished with status 'done'
+  Created wheel for progressbar: filename=progressbar-2.5-py3-none-any.whl size=12075 sha256=434f57cb03164f1249dafbe11b466d4ab68974edcf3c913337dec3dfaf0628df
+  Stored in directory: /root/.cache/pip/wheels/36/48/33/0d3f9db2bd04604f1ef1e15bd9ebd0458bdd7699a72d5b1680
+  Building wheel for wget (setup.py): started
+  Building wheel for wget (setup.py): finished with status 'done'
+  Created wheel for wget: filename=wget-3.2-py3-none-any.whl size=9680 sha256=cb02847cc92e57bc2726f7b0689f66d97242d98713028f0b84a445deafcc3ef6
+  Stored in directory: /root/.cache/pip/wheels/df/d8/7c/a62984d928c4d9d2d2abe86ae3bd091679cfc87bf6709256df
+Successfully built progressbar wget
+Installing collected packages: urllib3, smmap, pydantic-core, gitdb, annotated-types, wcwidth, sentry-sdk, pydantic, gitpython, eval-type-backport, click, braceexpand, wget, webdataset, wandb, torchlibrosa, progressbar, h5py, ftfy, laion-clap
+  Attempting uninstall: urllib3
+    Found existing installation: urllib3 1.26.6
+    Uninstalling urllib3-1.26.6:
+      Successfully uninstalled urllib3-1.26.6
+  Attempting uninstall: wcwidth
+    Found existing installation: wcwidth 0.2.6
+    Uninstalling wcwidth-0.2.6:
+      Successfully uninstalled wcwidth-0.2.6
+Successfully installed annotated-types-0.7.0 braceexpand-0.1.7 click-8.1.8 eval-type-backport-0.4.0 ftfy-6.2.3 gitdb-4.0.12 gitpython-3.1.51 h5py-3.11.0 laion-clap-1.1.7 progressbar-2.5 pydantic-2.10.6 pydantic-core-2.27.2 sentry-sdk-2.65.0 smmap-5.0.3 torchlibrosa-0.1.0 urllib3-2.2.3 wandb-0.24.2 wcwidth-0.2.14 webdataset-0.2.100 wget-3.2
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
