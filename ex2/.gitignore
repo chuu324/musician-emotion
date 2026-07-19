@@ -1,0 +1,9 @@
+# 18G zip 备份
+archives/
+
+# 3.4G 主 checkpoint（archives/checkpoints.zip 里已有）
+checkpoints/
+
+__pycache__/
+*.pyc
+.ipynb_checkpoints/

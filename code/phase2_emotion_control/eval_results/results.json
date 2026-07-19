@@ -1,0 +1,16 @@
+{
+  "CLAP_Score": {
+    "CLAP_score_mean": 0.06498657756795485,
+    "CLAP_score_std": 0.08549527938751522,
+    "n_samples": 12
+  },
+  "Emotion_Fidelity": {
+    "VAE_mean": 0.24259499087929723,
+    "VAE_std": 0.14556559041720765,
+    "AAE_mean": 0.2775565405686696,
+    "AAE_std": 0.17824844712780585,
+    "V_correlation": 0.2731675819351663,
+    "A_correlation": -0.4001092819934882,
+    "n_samples": 12
+  }
+}

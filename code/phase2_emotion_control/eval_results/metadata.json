@@ -1,0 +1,86 @@
+[
+  {
+    "text": "Happy energetic music",
+    "valence": 0.85,
+    "arousal": 0.8,
+    "gen_path": "./eval_results/generated/eval_happy_energetic_v0.85_a0.80.wav",
+    "desc": "happy_energetic"
+  },
+  {
+    "text": "Calm relaxing piano",
+    "valence": 0.8,
+    "arousal": 0.15,
+    "gen_path": "./eval_results/generated/eval_calm_relaxing_v0.80_a0.15.wav",
+    "desc": "calm_relaxing"
+  },
+  {
+    "text": "Sad melancholic melody",
+    "valence": 0.2,
+    "arousal": 0.25,
+    "gen_path": "./eval_results/generated/eval_sad_melancholic_v0.20_a0.25.wav",
+    "desc": "sad_melancholic"
+  },
+  {
+    "text": "Tense dramatic soundtrack",
+    "valence": 0.25,
+    "arousal": 0.75,
+    "gen_path": "./eval_results/generated/eval_tense_dramatic_v0.25_a0.75.wav",
+    "desc": "tense_dramatic"
+  },
+  {
+    "text": "Neutral background ambient",
+    "valence": 0.5,
+    "arousal": 0.5,
+    "gen_path": "./eval_results/generated/eval_neutral_v0.50_a0.50.wav",
+    "desc": "neutral"
+  },
+  {
+    "text": "Romantic soft love song",
+    "valence": 0.8,
+    "arousal": 0.4,
+    "gen_path": "./eval_results/generated/eval_romantic_v0.80_a0.40.wav",
+    "desc": "romantic"
+  },
+  {
+    "text": "Angry aggressive rock",
+    "valence": 0.15,
+    "arousal": 0.85,
+    "gen_path": "./eval_results/generated/eval_angry_aggressive_v0.15_a0.85.wav",
+    "desc": "angry_aggressive"
+  },
+  {
+    "text": "Boring monotonous drone",
+    "valence": 0.3,
+    "arousal": 0.15,
+    "gen_path": "./eval_results/generated/eval_boring_v0.30_a0.15.wav",
+    "desc": "boring"
+  },
+  {
+    "text": "Uplifting cheerful tune",
+    "valence": 0.7,
+    "arousal": 0.65,
+    "gen_path": "./eval_results/generated/eval_uplifting_v0.70_a0.65.wav",
+    "desc": "uplifting"
+  },
+  {
+    "text": "Misty dreamy soundscape",
+    "valence": 0.55,
+    "arousal": 0.3,
+    "gen_path": "./eval_results/generated/eval_dreamy_v0.55_a0.30.wav",
+    "desc": "dreamy"
+  },
+  {
+    "text": "Epic orchestral battle",
+    "valence": 0.4,
+    "arousal": 0.8,
+    "gen_path": "./eval_results/generated/eval_epic_v0.40_a0.80.wav",
+    "desc": "epic"
+  },
+  {
+    "text": "Dark mysterious atmosphere",
+    "valence": 0.2,
+    "arousal": 0.45,
+    "gen_path": "./eval_results/generated/eval_dark_v0.20_a0.45.wav",
+    "desc": "dark"
+  }
+]

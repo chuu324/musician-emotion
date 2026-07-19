@@ -1,0 +1,72 @@
+# ============================================================
+# Central configuration for emotion-controllable MusicGen
+# ============================================================
+
+model:
+  backbone: "facebook/musicgen-small"   # swap to musicgen-medium/large if compute allows
+  freeze_backbone: true
+  use_lora: false                        # set true to also attach LoRA adapters on the decoder
+  lora:
+    r: 8
+    alpha: 16
+    dropout: 0.05
+    target_modules: ["q_proj", "v_proj", "k_proj", "out_proj"]
+
+  emotion_adapter:
+    text_hidden_size: 768          # T5-base hidden size used by musicgen-small/medium's text encoder
+    mlp_hidden_size: 128
+    # use_film: true                 # FiLM-modulate T5 hidden states with (valence, arousal)
+    use_film: false                # retrain v2: prefix-only, avoid warping all T5 hidden states
+    use_prefix_token: true         # prepend one learned "emotion token" to the encoder sequence
+    va_range: [-1.0, 1.0]          # expected input range for valence & arousal
+
+data:
+  # train_manifest: "data/manifests/train_val_test/train.jsonl"
+  # val_manifest:   "data/manifests/train_val_test/val.jsonl"
+  # test_manifest:  "data/manifests/train_val_test/test.jsonl"
+  train_manifest: "data/manifests/train_val_test.jsonl/train.jsonl"
+  val_manifest:   "data/manifests/train_val_test.jsonl/val.jsonl"
+  test_manifest:  "data/manifests/train_val_test.jsonl/test.jsonl"
+  # extra_pseudo_labeled_manifest: "data/manifests/mtg_pseudo.jsonl"  # optional, set to null to skip
+  extra_pseudo_labeled_manifest: null  # retrain v2: DEAM+PMEmo only, skip noisy pseudo labels
+  sample_rate: 32000
+  clip_seconds: 10                # length of audio segment used per training example
+  num_workers: 4
+
+train:
+  batch_size: 16
+  grad_accum_steps: 1
+  # epochs: 15
+  epochs: 8
+  # lr: 0.00003
+  lr: 0.00001
+  weight_decay: 0.01
+  warmup_steps: 200
+  log_every: 20
+  # eval_every_steps: 200
+  eval_every_steps: 200
+  # save_every_steps: 200
+  save_every_steps: 200
+  checkpoint_dir: "checkpoints"
+  mixed_precision: "bf16"          # "no" | "fp16" | "bf16"
+  seed: 42
+  prefix_reg_weight: 0.1            # retrain v3: L2 penalty on scaled prefix embedding
+
+  # bonus objective, Section 3 innovation #2 in the proposal
+  use_alignment_loss: false
+  alignment_loss_weight: 0.1
+  align_every_n_steps: 50
+  gumbel_temperature: 1.0
+
+eval:
+  clap_checkpoint: "laion/larger_clap_music"
+  # fad_background_audio_dir: null   # e.g. a folder of held-out DEAM/PMEmo clips, or MusicCaps if you have it
+  fad_background_audio_dir: "data/fad_reference"
+  fad_clap_ckpt_dir: "checkpoints/clap_weights"
+  fad_clap_submodel: "music_audioset"
+  num_generations_per_prompt: 3
+  generation_duration_seconds: 10
+  listening_test_sample_size: 20
+  # Optional external benchmark (see data/prepare_aimoclips.py and README Sec 2.4). Evaluation-only —
+  # never referenced by data.train_manifest / data.extra_pseudo_labeled_manifest.
+  aimoclips_manifest: "data/manifests/aimoclips_eval.jsonl"

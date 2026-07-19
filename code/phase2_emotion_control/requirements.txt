@@ -1,0 +1,16 @@
+# Phase 2 — 情感控制模块依赖
+# ================================
+
+# 基础（Phase 1 已有，列出来确保完整）
+torch>=2.0.0
+transformers>=4.46.0
+scipy
+soundfile
+
+# 训练
+tensorboard            # 可选，用于训练可视化
+
+# 数据处理
+librosa                # 音频加载/特征提取
+datasets               # HuggingFace 数据集
+pydub                  # 音频格式转换

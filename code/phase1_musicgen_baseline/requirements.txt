@@ -1,0 +1,8 @@
+# MusicGen Phase 1 - Inference Baseline
+# 使用 HuggingFace Transformers 加载 MusicGen（比 AudioCraft 更易于安装）
+
+torch>=2.0.0
+transformers>=4.46.0
+scipy
+soundfile
+audiocraft  # 用于后续阶段的 AudioCraft 工具函数

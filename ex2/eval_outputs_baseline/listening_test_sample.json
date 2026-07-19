@@ -1,0 +1,122 @@
+[
+  {
+    "wav": "eval_outputs_baseline/generated_wavs/gen_0048.wav",
+    "prompt": "melancholic, sad and low-energy music",
+    "target_valence": -0.325,
+    "target_arousal": -0.125
+  },
+  {
+    "wav": "eval_outputs_baseline/generated_wavs/gen_0027.wav",
+    "prompt": "upbeat pop music, bright and energetic",
+    "target_valence": 0.1152,
+    "target_arousal": 0.2565
+  },
+  {
+    "wav": "eval_outputs_baseline/generated_wavs/gen_0006.wav",
+    "prompt": "upbeat pop music, bright and energetic",
+    "target_valence": 0.1256,
+    "target_arousal": 0.1146
+  },
+  {
+    "wav": "eval_outputs_baseline/generated_wavs/gen_0021.wav",
+    "prompt": "upbeat pop music, bright and energetic",
+    "target_valence": 0.1871,
+    "target_arousal": 0.1392
+  },
+  {
+    "wav": "eval_outputs_baseline/generated_wavs/gen_0001.wav",
+    "prompt": "melancholic, sad and low-energy music",
+    "target_valence": -0.25,
+    "target_arousal": -0.225
+  },
+  {
+    "wav": "eval_outputs_baseline/generated_wavs/gen_0017.wav",
+    "prompt": "upbeat pop music, bright and energetic",
+    "target_valence": 0.192,
+    "target_arousal": 0.08
+  },
+  {
+    "wav": "eval_outputs_baseline/generated_wavs/gen_0015.wav",
+    "prompt": "tense, aggressive and intense music",
+    "target_valence": -0.125,
+    "target_arousal": 0.075
+  },
+  {
+    "wav": "eval_outputs_baseline/generated_wavs/gen_0037.wav",
+    "prompt": "upbeat, joyful and energetic music",
+    "target_valence": 0.025,
+    "target_arousal": 0.15
+  },
+  {
+    "wav": "eval_outputs_baseline/generated_wavs/gen_0012.wav",
+    "prompt": "upbeat, joyful and energetic music",
+    "target_valence": 0.275,
+    "target_arousal": 0.2
+  },
+  {
+    "wav": "eval_outputs_baseline/generated_wavs/gen_0016.wav",
+    "prompt": "upbeat pop music, bright and energetic",
+    "target_valence": 0.1785,
+    "target_arousal": 0.2179
+  },
+  {
+    "wav": "eval_outputs_baseline/generated_wavs/gen_0026.wav",
+    "prompt": "upbeat pop music, bright and energetic",
+    "target_valence": 0.0875,
+    "target_arousal": 0.1152
+  },
+  {
+    "wav": "eval_outputs_baseline/generated_wavs/gen_0025.wav",
+    "prompt": "upbeat pop music, bright and energetic",
+    "target_valence": 0.1526,
+    "target_arousal": 0.1972
+  },
+  {
+    "wav": "eval_outputs_baseline/generated_wavs/gen_0044.wav",
+    "prompt": "upbeat, joyful and energetic music",
+    "target_valence": 0.075,
+    "target_arousal": 0.175
+  },
+  {
+    "wav": "eval_outputs_baseline/generated_wavs/gen_0033.wav",
+    "prompt": "tense, aggressive and intense music",
+    "target_valence": -0.25,
+    "target_arousal": 0.1
+  },
+  {
+    "wav": "eval_outputs_baseline/generated_wavs/gen_0004.wav",
+    "prompt": "calm, peaceful and relaxed music",
+    "target_valence": 0.0,
+    "target_arousal": -0.225
+  },
+  {
+    "wav": "eval_outputs_baseline/generated_wavs/gen_0014.wav",
+    "prompt": "melancholic, sad and low-energy music",
+    "target_valence": -0.225,
+    "target_arousal": -0.1
+  },
+  {
+    "wav": "eval_outputs_baseline/generated_wavs/gen_0038.wav",
+    "prompt": "upbeat, joyful and energetic music",
+    "target_valence": 0.0,
+    "target_arousal": 0.25
+  },
+  {
+    "wav": "eval_outputs_baseline/generated_wavs/gen_0020.wav",
+    "prompt": "upbeat pop music, bright and energetic",
+    "target_valence": 0.1586,
+    "target_arousal": 0.1
+  },
+  {
+    "wav": "eval_outputs_baseline/generated_wavs/gen_0036.wav",
+    "prompt": "upbeat pop music, bright and energetic",
+    "target_valence": 0.2077,
+    "target_arousal": 0.075
+  },
+  {
+    "wav": "eval_outputs_baseline/generated_wavs/gen_0032.wav",
+    "prompt": "tense, aggressive and intense music",
+    "target_valence": -0.15,
+    "target_arousal": 0.3
+  }
+]

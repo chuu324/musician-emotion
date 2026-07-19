@@ -1,0 +1,51 @@
+idx,prompt,category,target_valence,target_arousal,pred_valence,pred_arousal
+0,melancholic, sad and low-energy music,sad,-0.4500,-0.2500,-0.2461,-0.2251
+1,melancholic, sad and low-energy music,sad,-0.2500,-0.2250,-0.1923,-0.3481
+2,upbeat, joyful and energetic music,happy,0.4750,0.5500,0.1313,0.1567
+3,tense, aggressive and intense music,tense,-0.3750,0.0500,0.1140,0.1647
+4,calm, peaceful and relaxed music,calm,0.0000,-0.2250,-0.2436,-0.4594
+5,melancholic, sad and low-energy music,sad,-0.1000,-0.4000,-0.1262,-0.1353
+6,upbeat pop music, bright and energetic,happy,0.1256,0.1146,0.2752,0.3363
+7,upbeat pop music, bright and energetic,happy,0.2125,0.1152,0.2547,0.3396
+8,tense, aggressive and intense music,tense,-0.1500,0.3750,0.0822,0.2581
+9,upbeat, joyful and energetic music,happy,0.0750,0.3250,0.1922,0.2622
+10,melancholic, sad and low-energy music,sad,-0.4000,-0.1000,-0.2788,-0.3628
+11,calm, peaceful and relaxed music,calm,0.2000,-0.1000,-0.3005,-0.3682
+12,upbeat, joyful and energetic music,happy,0.2750,0.2000,0.1984,0.2162
+13,upbeat pop music, bright and energetic,happy,0.1858,0.1398,0.2701,0.2418
+14,melancholic, sad and low-energy music,sad,-0.2250,-0.1000,-0.1670,-0.2456
+15,tense, aggressive and intense music,tense,-0.1250,0.0750,0.0675,0.1181
+16,upbeat pop music, bright and energetic,happy,0.1785,0.2179,0.3221,0.3808
+17,upbeat pop music, bright and energetic,happy,0.1920,0.0800,0.1494,0.2849
+18,melancholic, sad and low-energy music,sad,-0.6125,-0.4100,-0.3237,-0.3856
+19,upbeat, joyful and energetic music,happy,0.2250,0.1000,0.2479,0.1847
+20,upbeat pop music, bright and energetic,happy,0.1586,0.1000,0.2589,0.2939
+21,upbeat pop music, bright and energetic,happy,0.1871,0.1392,0.2518,0.3990
+22,upbeat, joyful and energetic music,happy,0.2500,0.1000,0.2048,0.2739
+23,upbeat pop music, bright and energetic,happy,0.2424,0.1146,0.2322,0.3559
+24,melancholic, sad and low-energy music,sad,-0.5750,-0.3250,-0.1180,-0.1824
+25,upbeat pop music, bright and energetic,happy,0.1526,0.1972,0.1840,0.3469
+26,upbeat pop music, bright and energetic,happy,0.0875,0.1152,0.2672,0.3037
+27,upbeat pop music, bright and energetic,happy,0.1152,0.2565,-0.0037,0.0389
+28,upbeat, joyful and energetic music,happy,0.1500,0.1000,0.1588,0.3673
+29,melancholic, sad and low-energy music,sad,-0.3750,-0.5500,-0.0429,-0.1304
+30,upbeat, joyful and energetic music,happy,0.4750,0.5000,0.1953,0.1462
+31,melancholic, sad and low-energy music,sad,-0.1250,-0.3250,-0.2207,-0.2704
+32,tense, aggressive and intense music,tense,-0.1500,0.3000,0.0519,0.0848
+33,tense, aggressive and intense music,tense,-0.2500,0.1000,-0.0756,0.0070
+34,tense, aggressive and intense music,tense,-0.1000,0.0500,-0.0482,-0.0204
+35,upbeat, joyful and energetic music,happy,0.1500,0.4750,0.2687,0.1516
+36,upbeat pop music, bright and energetic,happy,0.2077,0.0750,0.1793,0.2575
+37,upbeat, joyful and energetic music,happy,0.0250,0.1500,0.2645,0.1895
+38,upbeat, joyful and energetic music,happy,0.0000,0.2500,0.2020,0.1879
+39,melancholic, sad and low-energy music,sad,-0.2000,-0.3500,-0.1728,-0.1657
+40,upbeat pop music, bright and energetic,happy,0.1275,0.1718,0.2204,0.2440
+41,melancholic, sad and low-energy music,sad,-0.7750,-0.3750,-0.0829,-0.1480
+42,upbeat, joyful and energetic music,happy,0.1750,0.4500,0.3211,0.3954
+43,melancholic, sad and low-energy music,sad,-0.0500,-0.5000,-0.1393,-0.2495
+44,upbeat, joyful and energetic music,happy,0.0750,0.1750,0.1455,0.2377
+45,upbeat pop music, bright and energetic,happy,0.1700,0.2291,0.1267,0.2521
+46,upbeat, joyful and energetic music,happy,0.0500,0.0250,0.2368,0.3312
+47,upbeat pop music, bright and energetic,happy,0.1700,0.1936,0.2822,0.2754
+48,melancholic, sad and low-energy music,sad,-0.3250,-0.1250,-0.1495,-0.2636
+49,upbeat pop music, bright and energetic,happy,0.2125,0.1125,0.2760,0.2926
