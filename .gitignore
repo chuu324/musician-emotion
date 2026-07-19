@@ -1,0 +1,65 @@
+# 数据集音频（评审时可自行下载，代码中有下载脚本）
+mtg_data/audio/
+mtg_data/*.tar
+mtg_data/*.tar.*
+
+# 训练缓存（可重新生成）
+cache/
+code/phase2_emotion_control/cache/
+
+# Python 缓存
+__pycache__/
+*.pyc
+*.pyo
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+
+# 大检查点（超过 GitHub 100MB 限制）
+checkpoints/adapter_v3.pth
+*.pth
+*.pt
+*.ckpt
+
+# 虚拟环境
+mtg-jamendo-dataset/venv/
+.venv/
+venv/
+.env/
+.envrc
+
+# 操作系统文件
+.DS_Store
+Thumbs.db
+
+# 日志
+logs/
+*.log
+
+# 音频文件
+*.mp3
+*.wav
+*.flac
+*.m4a
+*.ogg
+
+# 演示输出
+outputs_demo/
+*/outputs_demo/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+
+# 数据集原始下载
+mtg-jamendo-dataset/data/download/
+mtg-jamendo-dataset/derived/
+mtg-jamendo-dataset/stats/
+
+# 评估生成的音频
+code/phase2_emotion_control/eval_results/generated/
