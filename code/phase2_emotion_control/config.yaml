@@ -1,0 +1,28 @@
+# Phase 2 — 情感控制模块训练配置
+# =================================
+# 先用 dummy 数据跑通流程后，再替换真实数据路径
+
+# ----- 模型 -----
+model_name: "facebook/musicgen-small"
+device: auto                          # auto / cuda / cpu
+
+# ----- 训练 -----
+epochs: 5
+batch_size: 8
+lr: 0.001
+weight_decay: 0.0001
+num_samples: 64                       # dummy 数据条数
+use_fidelity_loss: false              # 是否启用 emotion-fidelity alignment loss
+fidelity_weight: 0.1
+
+# ----- 数据（后续 data_prep.py 产出） -----
+data_path: null                       # 后续改为 "data/train_dataset.pt"
+val_data_path: null
+
+# ----- 输出 -----
+# 注意: 此 yaml 文件仅供参看，实际默认值见 train_adapter.py 的 argparse
+# train_adapter.py 默认: save_path="checkpoints/adapter.pth"
+# evaluate.py 默认:      checkpoint="checkpoints/adapter_mtg_real.pth"
+# generate.py 默认:      checkpoint="checkpoints/adapter_v3.pth"
+save_path: "checkpoints/adapter.pth"
+log_dir: "logs/"

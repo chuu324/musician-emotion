@@ -1,0 +1,72 @@
+[
+  {
+    "audio_path": "/home/eir/ddd/code/phase2_emotion_control/data/audio/synth_000_v0.33_a0.64.wav",
+    "text": "Tense and intense dramatic music",
+    "valence": 0.334,
+    "arousal": 0.638,
+    "duration": 3.28
+  },
+  {
+    "audio_path": "/home/eir/ddd/code/phase2_emotion_control/data/audio/synth_001_v0.84_a0.13.wav",
+    "text": "Calm and peaceful melody, relaxing",
+    "valence": 0.835,
+    "arousal": 0.133,
+    "duration": 2.27
+  },
+  {
+    "audio_path": "/home/eir/ddd/code/phase2_emotion_control/data/audio/synth_002_v0.30_a0.48.wav",
+    "text": "Mellow ambient instrumental music",
+    "valence": 0.299,
+    "arousal": 0.476,
+    "duration": 2.95
+  },
+  {
+    "audio_path": "/home/eir/ddd/code/phase2_emotion_control/data/audio/synth_003_v0.38_a0.67.wav",
+    "text": "Tense and intense dramatic music",
+    "valence": 0.381,
+    "arousal": 0.671,
+    "duration": 3.34
+  },
+  {
+    "audio_path": "/home/eir/ddd/code/phase2_emotion_control/data/audio/synth_004_v0.33_a0.49.wav",
+    "text": "Mellow ambient instrumental music",
+    "valence": 0.326,
+    "arousal": 0.494,
+    "duration": 2.99
+  },
+  {
+    "audio_path": "/home/eir/ddd/code/phase2_emotion_control/data/audio/synth_005_v0.29_a0.40.wav",
+    "text": "Sad and melancholic slow piano piece",
+    "valence": 0.289,
+    "arousal": 0.396,
+    "duration": 2.79
+  },
+  {
+    "audio_path": "/home/eir/ddd/code/phase2_emotion_control/data/audio/synth_006_v0.27_a0.58.wav",
+    "text": "Mellow ambient instrumental music",
+    "valence": 0.268,
+    "arousal": 0.579,
+    "duration": 3.16
+  },
+  {
+    "audio_path": "/home/eir/ddd/code/phase2_emotion_control/data/audio/synth_007_v0.78_a0.47.wav",
+    "text": "Uplifting cheerful background music",
+    "valence": 0.78,
+    "arousal": 0.474,
+    "duration": 2.95
+  },
+  {
+    "audio_path": "/home/eir/ddd/code/phase2_emotion_control/data/audio/synth_008_v0.49_a0.39.wav",
+    "text": "Mellow ambient instrumental music",
+    "valence": 0.492,
+    "arousal": 0.391,
+    "duration": 2.78
+  },
+  {
+    "audio_path": "/home/eir/ddd/code/phase2_emotion_control/data/audio/synth_009_v0.20_a0.43.wav",
+    "text": "Mellow ambient instrumental music",
+    "valence": 0.196,
+    "arousal": 0.427,
+    "duration": 2.85
+  }
+]
